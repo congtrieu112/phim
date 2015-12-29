@@ -12,7 +12,11 @@
                 <div id="show-video"></div>
                 <?php
                 $paged = get_query_var('page', 1);
-                $episode = $paged - 1;
+                $episode = 0;
+                if($paged){
+                  $episode = $paged - 1;
+                }
+                
                 $link_drive = get_field('link_video', $post->ID);
                 $link_drive = explode("\r\n", $link_drive);
                 if (count($link_drive) > 0) {
