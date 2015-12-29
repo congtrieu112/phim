@@ -7,8 +7,10 @@
         <div class="row">
             <!-- Video Player Start -->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 playershadow">
-              <div class="playeriframe">
-                <?php //echo vm_get_video_player(vm_get_post_meta('_vm_videofield_option')); ?>
+              <div class="playeriframe"> 
+                <?php if( !get_field('link_video', $post->ID)){ ?>
+                <?php echo vm_get_video_player(vm_get_post_meta('_vm_videofield_option')); ?>
+                <?php }else{ ?>
                 <div id="show-video"></div>
                 <?php
                 $paged = get_query_var('page', 1);
@@ -32,6 +34,7 @@
                 $code .= "</script>";
                 print $code;
                 ?>
+                <?php }?>
               </div>
 
             </div>
