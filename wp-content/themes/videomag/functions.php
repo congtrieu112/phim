@@ -188,7 +188,7 @@ function vm_softcircles_scripts() {
 
     wp_register_style('vm-bootstrap-style', get_template_directory_uri() . '/css/bootstrap.css');
     wp_enqueue_style('vm-bootstrap-style');
-    wp_enqueue_style('vm-style', get_stylesheet_uri());
+    wp_enqueue_style('vm-style', get_stylesheet_uri() );
     wp_register_style('vm-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
     wp_enqueue_style('vm-font-awesome');
     wp_enqueue_script("jquery");
@@ -209,6 +209,32 @@ function vm_softcircles_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'vm_softcircles_scripts');
+/*
+ *  Element hook wp_default_styles
+ *  Chage all ver style 
+ */
+
+function my_wp_default_styles($styles)
+{
+	//use release date for version
+	$styles->default_version = time();
+}
+add_action("wp_default_styles", "my_wp_default_styles");
+/*
+ *  Random string with the length
+ * 
+ */
+
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
 
 /*
  * Editor Styles
