@@ -28,6 +28,8 @@
             <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
             <script type="text/javascript" src="js/respond.min.js"></script>
         <![endif]-->
+        <script type="text/javascript" src="http://content.jwplatform.com/libraries/h2dPfFWZ.js"></script>
+    <script type="text/javascript">jwplayer.key = 'H9xTsh9D62dkv+MYY96fdzM8RhYZCIlEKrYe+OxlxbM='</script>
         <?php wp_head(); ?>
     </head>
 
@@ -86,3 +88,4 @@
                 <?php echo get_nav_shortcode('category'); ?>
             </header>
             <!-- Header End -->
+            

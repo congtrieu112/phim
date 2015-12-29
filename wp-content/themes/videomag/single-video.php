@@ -7,10 +7,47 @@
         <div class="row">
             <!-- Video Player Start -->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 playershadow">
-                <div class="playeriframe">
-                    <?php echo vm_get_video_player(vm_get_post_meta('_vm_videofield_option')); ?>
-                </div>
+              <div class="playeriframe">
+                <?php //echo vm_get_video_player(vm_get_post_meta('_vm_videofield_option')); ?>
+                <div id="show-video"></div>
+                <?php
+                $paged = get_query_var('page', 1);
+                $episode = $paged - 1;
+                $link_drive = get_field('link_video', $post->ID);
+                $link_drive = explode("\r\n", $link_drive);
+                if (count($link_drive) > 0) {
+                  $link_drives = strip_tags($link_drive[$episode]);
+                }
+                $file = drive_direct($link_drives);
+                $soure = 'sources: [';
+                $endsoure = ']';
+                $code = "<script type='text/javascript'>";
+                $code .= "jwplayer('show-video').setup({";
+                $code .= $soure . $file . $endsoure;
+                $code .= " })";
+                $code .= "</script>";
+                print $code;
+                ?>
+              </div>
+
             </div>
+            <?php
+            if (count($link_drive) > 2) {
+              $i = 0;
+              $link = get_permalink($post->ID);
+              print '<div class="widget tag_cloud-1 widget_tag_cloud">';
+              print '<div class="tagcloud">';
+
+              foreach ($link_drive as $item) {
+                $i++;
+                print ' <a href="' . $link . $i . '" class="tag-link-6" title="5 topics" style="font-size: 17.6pt;">Episode ' . $i . '</a>';
+              }
+              print '</div>';
+              print '</div>';
+            }
+            ?>
+
+
             <!-- Video Player End --> 
             <!-- Video Stats and Sharing Start -->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 videoinfo">
