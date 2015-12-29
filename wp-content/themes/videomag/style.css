@@ -2682,3 +2682,7 @@ div.wpcf7-validation-errors {
 .conentsection > .heading {
 	margin-bottom: 30px !important;
 }
+a.tag-link-6.active {
+    background-color: blue !important;
+    cursor: context-menu;
+}

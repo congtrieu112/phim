@@ -47,7 +47,16 @@
 
               foreach ($link_drive as $item) {
                 $i++;
-                print ' <a href="' . $link . $i . '" class="tag-link-6" title="5 topics" style="font-size: 17.6pt;">Episode ' . $i . '</a>';
+                if($i==$paged ){
+                 print ' <a href="javascript:void(0)" class="tag-link-6 active" title="5 topics" style="font-size: 17.6pt;">Episode ' . $i . '</a>';
+
+                }elseif($paged == 0 && $i ==1){
+                 print ' <a href="javascript:void(0)" class="tag-link-6 active" title="5 topics" style="font-size: 17.6pt;">Episode ' . $i . '</a>';
+
+                }else {
+                  print ' <a href="' . $link . $i . '" class="tag-link-6" title="5 topics" style="font-size: 17.6pt;">Episode ' . $i . '</a>';
+
+                }
               }
               print '</div>';
               print '</div>';
