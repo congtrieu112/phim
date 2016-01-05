@@ -188,6 +188,7 @@
                                         <h2 class="heading"><?php echo get_the_title(); ?></h2>
                                         <div class="clearfix"></div>
                                         <div class="blogmetas">
+                                        
                                             <ul>
                                                 <li>
                                                     <i class="fa fa-align-justify"></i>
@@ -215,6 +216,21 @@
 
                 <!-- Contents Section End -->
                 <div class="clearfix"></div>
+                <div class="session row">
+                  <h2 class="heading"><?php print __('Dowload Videos', 'videomagazine')?></h2>
+                  <div class="clearfix"></div>
+
+                  <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                  </div>
+                  
+                  <div class="alert alert-info alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                  </div>
+
+                </div>
 
                 <?php get_template_part('content', 'related-videos'); ?>
                 <?php
