@@ -1754,18 +1754,7 @@
         </div>
         <!-- Contents Section End -->
         <div class="clearfix"></div>
-        <!-- Pagination Start -->
-        <ul class="pagination">
-          <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-          <li><a href="#">1</a></li>
-          <li class="disabled"><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li class="active"><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-        </ul>
-        <div class="clearfix"></div>
-        <!-- Pagination End -->
+        
       </div>
       <?php echo do_shortcode('[su_frame]<img src="http://www.softcircles.net/demos/wp/videomagazine/wp-content/uploads/2014/05/adv.gif" alt="" class="img-responsive" />[/su_frame]') ;?>
     <div class="sections">
