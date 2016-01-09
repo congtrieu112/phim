@@ -188,11 +188,12 @@ class Su_Shortcodes {
 		$atts = shortcode_atts( array(
 				'style' => 'default',
 				'align' => 'left',
-				'class' => ''
+				'class' => '',
+      'link'=>''
 			), $atts, 'frame' );
 		su_query_asset( 'css', 'su-content-shortcodes' );
 		su_query_asset( 'js', 'su-other-shortcodes' );
-		return '<span class="su-frame su-frame-align-' . $atts['align'] . ' su-frame-style-' . $atts['style'] . su_ecssc( $atts ) . '"><span class="su-frame-inner">' . do_shortcode( $content ) . '</span></span>';
+		return '<span class="su-frame su-frame-align-' . $atts['align'] . ' su-frame-style-' . $atts['style'] . su_ecssc( $atts ) . '"><span class="su-frame-inner"><a href="'.$atts['link'].'">' . do_shortcode( $content ) . '</a></span></span>';
 	}
 
 	public static function row( $atts = null, $content = null ) {

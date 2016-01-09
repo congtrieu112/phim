@@ -239,149 +239,54 @@
 
 
       </div>
-            <?php echo do_shortcode('[su_frame]<img src="http://www.softcircles.net/demos/wp/videomagazine/wp-content/uploads/2014/05/adv.gif" alt="" class="img-responsive" />[/su_frame]'); ?>
+      
+     <?php
+     $link_adv_2 = (!empty(get_field('adv',885)) &&  get_field('adv',885) ) ? get_field('adv',885) : "";
+     $img_adv_2 = (!empty(wp_get_attachment_image_src(get_post_thumbnail_id(885), 'full')[0]) && wp_get_attachment_image_src(get_post_thumbnail_id(885), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id(885), 'full')[0] : get_template_directory_uri() . '/images/images/adv.gif'; 
+      echo ($link_adv_2) ?  do_shortcode('[su_frame link='.$link_adv_2.']<img src="'.$img_adv_2.'" alt="" class="img-responsive" />[/su_frame]') : "";
+     ?>
       <div class="sections">
         <h2 class="heading">Funny</h2>
         <div class="clearfix"></div>
         <div class="row">
+          <?php
+          $block_home_adv = get_hom_top(874);
+          if($block_home_adv) : 
+          for ($block_adv = 0; $block_adv < count($block_home_adv); $block_adv++) :
+                $post_adv = get_post($block_home_adv["$block_adv"]);
+                $image = (wp_get_attachment_image_src(get_post_thumbnail_id($post_adv->ID), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($post_adv->ID), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
+                $time = (get_field('time_video', $post_adv->ID)) ? get_field('time_video', $post_adv->ID) : '0 : 00';
+                $link_adv = get_field('adv',$post_adv->ID);
+                ?>
 
           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <!-- Video Box Start -->
             <div class="videobox2">
-              <figure>
-                <!-- Video Thumbnail Start --> 
-                <a href="http://phim.dev/video/faiz-sifir-anahtar-hazir/">
-                  <img src="http://i.vimeocdn.com/video/477539409_640.jpg" alt="Faiz Sıfır Anahtar Hazır" class="img-responsive hovereffect">
-                </a>
-                <div class="vidopts">
-                  <ul>
-                    <li><i class="fa fa-clock-o"></i>00:38</li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <!-- Video Thumbnail End -->
-              </figure>
-              <!-- Video Title -->
-              <h4><a href="http://phim.dev/video/faiz-sifir-anahtar-hazir/">Faiz Sıfır Anahtar Hazır</a></h4>
-              <!-- Video Title -->
-            </div>
+                    <figure>
+                      <!-- Video Thumbnail Start --> 
+                      <a href="<?php print $link_adv; ?>">
+                        <img src="<?php print get_bfithumb(640, 360, $image) ?>" alt="<?php print $post_adv->post_title ?>" class="img-responsive hovereffect">
+                      </a>
+                      <div class="vidopts">
+                        <ul>
+                          <li><i class="fa fa-clock-o"></i><?php print $time; ?></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                      </div>
+                      <!-- Video Thumbnail End -->
+                    </figure>
+                    <!-- Video Title -->
+                    <h4><a class="title-text" href="<?php print $link_adv; ?>"><?php print catchuoi($post_adv->post_title, 15); ?></a></h4>
+                    <!-- Video Title -->
+                  </div>
             <!-- Video Box End -->
           </div>
+          <?php 
+          endfor;
+          endif;
+          ?>
 
-          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <!-- Video Box Start -->
-            <div class="videobox2">
-              <figure>
-                <!-- Video Thumbnail Start --> 
-                <a href="http://phim.dev/video/spot-ipad-deaf/">
-                  <img src="http://i.vimeocdn.com/video/477544195_640.jpg" alt="Spot ” iPad Deaf “" class="img-responsive hovereffect">
-                </a>
-                <div class="vidopts">
-                  <ul>
-                    <li><i class="fa fa-clock-o"></i>02:13</li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <!-- Video Thumbnail End -->
-              </figure>
-              <!-- Video Title -->
-              <h4><a href="http://phim.dev/video/spot-ipad-deaf/">Spot ” iPad Deaf “</a></h4>
-              <!-- Video Title -->
-            </div>
-            <!-- Video Box End -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <!-- Video Box Start -->
-            <div class="videobox2">
-              <figure>
-                <!-- Video Thumbnail Start --> 
-                <a href="http://phim.dev/video/rock-cycling/">
-                  <img src="http://i.vimeocdn.com/video/477547875_640.jpg" alt="Rock Cycling" class="img-responsive hovereffect">
-                </a>
-                <div class="vidopts">
-                  <ul>
-                    <li><i class="fa fa-clock-o"></i>06:18</li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <!-- Video Thumbnail End -->
-              </figure>
-              <!-- Video Title -->
-              <h4><a href="http://phim.dev/video/rock-cycling/">Rock Cycling</a></h4>
-              <!-- Video Title -->
-            </div>
-            <!-- Video Box End -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <!-- Video Box Start -->
-            <div class="videobox2">
-              <figure>
-                <!-- Video Thumbnail Start --> 
-                <a href="http://phim.dev/video/clifton-skatepark/">
-                  <img src="http://i.vimeocdn.com/video/477540839_640.jpg" alt="Clifton Skatepark" class="img-responsive hovereffect">
-                </a>
-                <div class="vidopts">
-                  <ul>
-                    <li><i class="fa fa-clock-o"></i>00:49</li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <!-- Video Thumbnail End -->
-              </figure>
-              <!-- Video Title -->
-              <h4><a href="http://phim.dev/video/clifton-skatepark/">Clifton Skatepark</a></h4>
-              <!-- Video Title -->
-            </div>
-            <!-- Video Box End -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <!-- Video Box Start -->
-            <div class="videobox2">
-              <figure>
-                <!-- Video Thumbnail Start --> 
-                <a href="http://phim.dev/video/tandem-gerardo-moreno/">
-                  <img src="http://i.vimeocdn.com/video/477818366_640.jpg" alt="Tandem Gerardo Moreno" class="img-responsive hovereffect">
-                </a>
-                <div class="vidopts">
-                  <ul>
-                    <li><i class="fa fa-clock-o"></i>07:02</li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <!-- Video Thumbnail End -->
-              </figure>
-              <!-- Video Title -->
-              <h4><a href="http://phim.dev/video/tandem-gerardo-moreno/">Tandem Gerardo Moreno</a></h4>
-              <!-- Video Title -->
-            </div>
-            <!-- Video Box End -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <!-- Video Box Start -->
-            <div class="videobox2">
-              <figure>
-                <!-- Video Thumbnail Start --> 
-                <a href="http://phim.dev/video/desigual-fashion-show/">
-                  <img src="http://i.vimeocdn.com/video/477543289_640.jpg" alt="Desigual Fashion Show" class="img-responsive hovereffect">
-                </a>
-                <div class="vidopts">
-                  <ul>
-                    <li><i class="fa fa-clock-o"></i>01:00</li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <!-- Video Thumbnail End -->
-              </figure>
-              <!-- Video Title -->
-              <h4><a href="http://phim.dev/video/desigual-fashion-show/">Desigual Fashion Show</a></h4>
-              <!-- Video Title -->
-            </div>
-            <!-- Video Box End -->
-          </div>
+         
 
         </div>
       </div>
