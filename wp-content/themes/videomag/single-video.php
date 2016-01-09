@@ -30,10 +30,12 @@
             }
             $file = drive_direct($link_drives);
             $soure = 'sources: [';
+            $image .= ', image: "';
+            $image .=  (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0].'"' : get_template_directory_uri() . '/images/images/img21.jpg"';
             $endsoure = ']';
             $code = "<script type='text/javascript'>";
             $code .= "jwplayer('show-video').setup({";
-            $code .= $soure . $file . $endsoure;
+            $code .= $soure . $file  . $endsoure.$image;
             $code .= " })";
             $code .= "</script>";
             print $code;
