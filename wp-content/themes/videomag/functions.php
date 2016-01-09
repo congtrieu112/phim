@@ -737,3 +737,81 @@ function curl($url) {
   curl_close($ch);
   return $page;
 }
+
+/*
+ * Get all id with block id
+ * @param int $block_id 
+ * @return array id .
+ */
+function get_hom_top($block_id) {
+  $block = get_post($block_id);
+  $arrid = array();
+  $max_items = (int)get_field('limit_home', $block->ID);
+  $count = 0;
+  if (have_rows('block_homes', $block->ID)) {
+    while ($count < $max_items && have_rows('block_homes', $block->ID)) {
+      the_row();
+      $count++;
+      $video_id = get_sub_field('block_home');
+      if ($video_id) {
+        $arrid[] = $video_id;
+      }
+    }
+  }
+  return $arrid;
+}
+
+/*
+ * Get size custom image
+ * @param int $w
+ * @param int $h
+ * @param int $url
+ */
+
+function get_bfithumb($w, $h, $url) {
+  include_once 'includes/bfithumb.php';
+  $params = array('width' => $w, 'height' => $h, 'crop' => true);
+  $image = bfi_thumb($url, $params);
+  return $image;
+}
+
+
+/*
+ * Get limit string
+ * @param string $string
+ * @param int $limitword
+ * @param int $kytu
+ */
+
+function custom_excerpt($string = "", $limitword = "", $kytu = "")
+{
+    $string = strip_tags($string);
+    $string = preg_replace('/\n/', ' ', trim($string));
+    $array = explode(' ', $string, $limitword);
+    $string = "";
+    for ($i = 0; $i <= (count($array) - 2); $i++):
+        $string .= $array[$i] . " ";
+    endfor;
+    return $string . $kytu;
+}
+
+
+/*
+ * Get limit string
+ * @param string $str
+ * @param int $limit
+ */
+
+function catchuoi($str, $limit) {
+  if (strlen($str) <= $limit) {
+    return $str;
+  }
+  elseif (strpos($str, " ", $limit) == null) {
+    return $str;
+  }
+  else {
+    $strs = strpos($str, " ", $limit);
+    $str = substr($str, 0, $strs) . "...";
+    return $str;
+  }
+}

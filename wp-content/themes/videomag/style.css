@@ -2686,3 +2686,11 @@ a.tag-link-6.active {
     background-color: blue !important;
     cursor: context-menu;
 }
+
+.tab-content > .active{
+      float: left;
+    border: 2px solid #ddd;
+    border-top: none;
+    padding: 10px 0;
+    margin-bottom: 10px
+}

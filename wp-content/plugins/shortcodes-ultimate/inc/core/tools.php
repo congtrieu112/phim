@@ -672,7 +672,7 @@ class Su_Tools {
 		// Prepare empty array for slides
 		$slides = array();
 		// Loop through source types
-		foreach ( array( 'media', 'posts', 'category', 'taxonomy' ) as $type )
+		foreach ( array( 'media', 'posts', 'category', 'taxonomy','video' ) as $type )
 			if ( strpos( trim( $args['source'] ), $type . ':' ) === 0 ) {
 				$args['source'] = array(
 					'type' => $type,
@@ -688,6 +688,13 @@ class Su_Tools {
 		if ( $args['source']['type'] === 'media' ) {
 			$query['post_type'] = 'attachment';
 			$query['post_status'] = 'any';
+			$query['post__in'] = (array) explode( ',', $args['source']['val'] );
+			$query['orderby'] = 'post__in';
+		}
+    
+    // Source: video
+		if ( $args['source']['type'] === 'video' ) {
+			$query['post_type'] = 'video';
 			$query['post__in'] = (array) explode( ',', $args['source']['val'] );
 			$query['orderby'] = 'post__in';
 		}
@@ -719,6 +726,7 @@ class Su_Tools {
 		}
 		// Query posts
 		$query = new WP_Query( $query );
+ 
 		// Loop through posts
 		if ( is_array( $query->posts ) ) foreach ( $query->posts as $post ) {
 				// Get post thumbnail ID
