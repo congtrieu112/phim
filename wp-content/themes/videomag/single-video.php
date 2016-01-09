@@ -11,7 +11,8 @@
           <?php if (!get_field('link_video', $post->ID)) { ?>
             <?php echo vm_get_video_player(vm_get_post_meta('_vm_videofield_option')); ?>
           <?php }
-          else { ?>
+          else {
+            ?>
             <div id="show-video"></div>
             <?php
             $paged = get_query_var('page', 1);
@@ -22,8 +23,8 @@
 
             $link_drive = get_field('link_video', $post->ID);
             $link_drive = explode("\r\n", $link_drive);
-            
-            
+
+
             if (count($link_drive) > 0) {
               $link_drives = strip_tags($link_drive[$episode]);
             }
@@ -36,9 +37,8 @@
             $code .= " })";
             $code .= "</script>";
             print $code;
-            
             ?>
-<?php } ?>
+          <?php } ?>
         </div>
 
       </div>
@@ -165,9 +165,9 @@
       <?php endif; ?>
 
       <?php if ($content_layout == '3cl'): ?>
-  <?php get_sidebar('content-one'); ?>
-  <?php get_sidebar('content-two'); ?>
-        <?php endif; ?>
+        <?php get_sidebar('content-one'); ?>
+        <?php get_sidebar('content-two'); ?>
+      <?php endif; ?>
 
       <div class="<?php echo $content_class; ?>">
 
@@ -182,9 +182,9 @@
             <?php if (!empty($categories)) : ?>
               <?php foreach ($categories as $category): ?>
                 <?php $category_links[] = '<a href="' . get_term_link($category->term_id, $category->taxonomy) . '" title="' . esc_attr(sprintf(__("View all posts in %s", THEME_TEXT_DOMAIN), $category->name)) . '">' . $category->name . '</a>'; ?>
-        <?php $category_array[] = $category->slug; ?>
-      <?php endforeach; ?>
-    <?php endif; ?>
+                <?php $category_array[] = $category->slug; ?>
+              <?php endforeach; ?>
+            <?php endif; ?>
 
             <!-- Video Detail Started -->
             <div <?php post_class('blogdetail videodetail sections'); ?>>
@@ -202,23 +202,23 @@
                         </li>
                         <li>
                           <i class="fa fa-tags"></i>
-    <?php the_tags(', '); ?>
+                          <?php the_tags(', '); ?>
                         </li>
                       </ul>
                       <div class="clearfix"></div>
                     </div>
-    <?php the_content(); ?>
+                    <?php the_content(); ?>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Video Detail End -->
-  <?php endwhile; ?>
+          <?php endwhile; ?>
         <?php else: ?>
           <div class="col-lg-12 col-md-14 col-sm-14 col-xs-16">
             <p><?php echo __('Sorry! There are no posts.', THEME_TEXT_DOMAIN); ?></p>
           </div>
-<?php endif; ?>
+        <?php endif; ?>
 
 
         <!-- Contents Section End -->
@@ -228,46 +228,55 @@
         $link_rapidgator = get_field('rapidgator_dowload', $post->ID);
         $link_datafile = get_field('datafile_dowload', $post->ID);
         $link_uploaded = get_field('field_56912de4f0a32', $post->ID);
-                    $link_drive_dowload = drive_direct_dowload($link_drives);
 
+        $button_rapidgator = '<a target="_blank" href="' . $link_rapidgator . '" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> Download</span></a>';
+        $button_datafile = '<a target="_blank" href="' . $link_datafile . '" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> Download</span></a>';
+        $button_uploaded = '<a target="_blank" href="' . $link_uploaded . '" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> Download</span></a>';
+
+        $link_drive_dowload = drive_direct_dowload($link_drives);
+
+        $link_360 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=360" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 360</span></a>';
+        $link_720 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=720" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 720</span></a>';
+        $link_1080 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=1080" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 1080</span></a>';
         ?>
-<?php if ($link_rapidgator || $link_datafile || $link_uploaded) : ?>
+        <?php if ($link_rapidgator || $link_datafile || $link_uploaded) : ?>
           <div class="session row">
 
             <h2 class="heading"><?php print __('Dowload Videos', THEME_TEXT_DOMAIN) ?></h2>
             <div class="clearfix"></div>
+  <?php if ($link_drive_dowload) : ?>
+              <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong><?php echo __('Google drive', THEME_TEXT_DOMAIN); ?></strong> :  <?php print $link_360; ?> , <?php print $link_720; ?> , <?php print $link_1080; ?>
+              </div>
+  <?php endif; ?>  
   <?php if ($link_rapidgator) : ?>
               <div class="alert alert-success alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong> <?php echo __('Rapidgator', THEME_TEXT_DOMAIN); ?></strong> <a  target="_blank" href="<?php print $link_rapidgator; ?>"><?php print $link_rapidgator; ?></a> 
+                <strong> <?php echo __('Rapidgator', THEME_TEXT_DOMAIN); ?></strong> : <?php print $button_rapidgator; ?>
               </div>
   <?php endif; ?>  
 
   <?php if ($link_datafile) : ?>
               <div class="alert alert-info alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong><?php echo __('Datafile', THEME_TEXT_DOMAIN); ?></strong> <a target="_blank"  href="<?php print $link_datafile; ?>"><?php print $link_datafile; ?></a> 
+                <strong><?php echo __('Datafile', THEME_TEXT_DOMAIN); ?></strong> : <?php print $button_datafile; ?>
               </div>
   <?php endif; ?> 
   <?php if ($link_uploaded) : ?>
               <div class="alert alert-warning alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong><?php echo __('Uploaded', THEME_TEXT_DOMAIN); ?></strong> <a target="_blank" href="<?php print $link_uploaded; ?>"><?php print $link_uploaded; ?></a> 
+                <strong><?php echo __('Uploaded', THEME_TEXT_DOMAIN); ?></strong> : <?php print $button_uploaded; ?>
               </div>
   <?php endif; ?>  
-            
-              <?php if ($link_drive_dowload) : ?>
-              <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong><?php echo __('Google drive', THEME_TEXT_DOMAIN); ?></strong> <a target="_blank" href="<?php print get_home_url().'/download.php?file='.$link_drive_dowload; ?>"><?php print the_title(); ?></a> 
-              </div>
-  <?php endif; ?>  
+
+
 
 
 
           </div>
-        <?php endif; ?>
-        <?php // print do_shortcode('[su_box title="Box" style="noise" box_color="#D10909"]Nec urna. Elit quis vel aliquet! Nunc, pellentesque pulvinar, tempor tincidunt magnis! Augue augue ut, lacus ut montes et mus? Nec placerat mattis lacus, pulvinar. Augue rhoncus arcu ultricies dis, hac nascetur rhoncus pid massa. Aenean?[/su_box]'); ?>
+<?php endif; ?>
+<?php // print do_shortcode('[su_box title="Box" style="noise" box_color="#D10909"]Nec urna. Elit quis vel aliquet! Nunc, pellentesque pulvinar, tempor tincidunt magnis! Augue augue ut, lacus ut montes et mus? Nec placerat mattis lacus, pulvinar. Augue rhoncus arcu ultricies dis, hac nascetur rhoncus pid massa. Aenean?[/su_box]');  ?>
 
         <?php get_template_part('content', 'related-videos'); ?>
         <?php
@@ -280,15 +289,15 @@
 
       </div>
 
-      <?php if ($content_layout == '2cr' || $content_layout == '3cm'): ?>
-        <?php get_sidebar('content-two'); ?>
-      <?php endif; ?>
+        <?php if ($content_layout == '2cr' || $content_layout == '3cm'): ?>
+  <?php get_sidebar('content-two'); ?>
+<?php endif; ?>
 
       <?php if ($content_layout == '3cr'): ?>
 
-  <?php get_sidebar('content-one'); ?>
-  <?php get_sidebar('content-two'); ?>
-<?php endif; ?>
+        <?php get_sidebar('content-one'); ?>
+        <?php get_sidebar('content-two'); ?>
+      <?php endif; ?>
 
     </div>
   </div>
