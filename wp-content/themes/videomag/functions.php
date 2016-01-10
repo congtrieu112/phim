@@ -537,7 +537,7 @@ if (!function_exists('vm_comment')) :
         }
     }
 
-    add_action('save_post', 'save_video_meta');
+//    add_action('save_post', 'save_video_meta');
 
     function vm_video_not_found_error() {
 
