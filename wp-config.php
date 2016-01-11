@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'phim_online');
+define('DB_NAME', 'phim');
 
 /** MySQL database username */
 define('DB_USER', 'root');
