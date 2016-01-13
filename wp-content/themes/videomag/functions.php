@@ -198,6 +198,7 @@ function vm_softcircles_scripts() {
     wp_enqueue_script('vm-respond', get_template_directory_uri() . '/js/respond.min.js', array(), '20120206', true);
     wp_enqueue_script('vm-main-script', get_template_directory_uri() . '/js/functions.js', array(), true);
     wp_enqueue_script('vm-sharing-buttons', THEME_JS . '/share-buttons.js', array(), true);
+    wp_enqueue_script('vm-ajax-more', THEME_JS . '/process.js', array(), true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -514,9 +515,9 @@ if (!function_exists('vm_comment')) :
         }
 
         // Update the post's metadata.
-        if (isset($_REQUEST['vm_videofield_option'])) {
+        if (isset($_POST['vm_videofield_option'])) {
             // get video data
-            $video_data = vm_get_videothumbnail($_REQUEST['vm_videofield_option']);
+            $video_data = vm_get_videothumbnail($_POST['vm_videofield_option']);
             if (empty($video_data)) {
 
                 update_post_meta($post_id, '_vm_video_thumbnail', NULL);
@@ -939,4 +940,100 @@ function drive_direct_dowload($linkf,$quaty = 360) {
     $res =  $f360p ;
   }
   return $res;
+}
+
+/*
+ * Emplement hook wp_ajax_NameAction()
+ */
+add_action("wp_ajax_load_more", "load_more");
+add_action("wp_ajax_nopriv_load_more", "load_more");
+
+function load_more() {
+    foreach ($_POST as $key => $value) {
+        $_POST[$key] = check_input_field($_POST[$key]);
+    }
+    
+    
+//    print json_encode($_POST);
+//    exit;
+
+//    if (!wp_verify_nonce($_POST['nonce_field'], "my_user_vote_nonce")) {
+//        exit("No naughty business please");
+//    }
+    
+    $array = array();
+    if ($_POST['team_id']) {
+        $array = array(
+            'post_type' => 'video',
+            'post_status' => 'publish',
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'video_categories',
+                    'field' => 'id',
+                    'terms' => $_POST['team_id']
+                ),
+            ),
+            'paged' => $_POST['page'],
+            'posts_per_page' => 10,
+        );
+    } else {
+        $array = array(
+            'post_type' => 'video',
+            'posts_per_page' => 10,
+            'paged' => $_POST['page'],
+        );
+    }
+
+
+    $query = new WP_Query($array);
+    $total = $query->max_num_pages;
+    if($_POST['page'] > $total){
+        exit();
+    }
+    if ($query->have_posts()):
+        while ($query->have_posts()): $query->the_post();
+            $image = (wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
+            $time = (get_field('time_video', $post->ID)) ? get_field('time_video', $post->ID) : '0 : 00';
+            ?>
+
+                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                    <!-- Video Box Start -->
+                    <div class="videobox2">
+                        <figure>
+                            <!-- Video Thumbnail Start --> 
+                            <a href="<?php print get_permalink(get_the_ID()); ?>">
+                                <img src="<?php print $image; ?>" alt="<?php print the_title(); ?>" class="img-responsive hovereffect">
+                            </a>
+                            <div class="vidopts">
+                                <ul>
+                                    <li><i class="fa fa-clock-o"></i><?php print $time; ?></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- Video Thumbnail End -->
+                        </figure>
+                        <!-- Video Title -->
+                        <h4><a href="<?php print get_permalink(get_the_ID()); ?>"><?php print catchuoi(get_the_title(), 15); ?></a></h4>
+                        <!-- Video Title -->
+                    </div>
+                    <!-- Video Box End -->
+                </div>
+            <?php
+        endwhile;
+    endif;
+    exit;
+}
+
+/*
+ * Check input field 
+ * 
+ */
+
+function check_input_field($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }

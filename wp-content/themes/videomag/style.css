@@ -2694,3 +2694,6 @@ a.tag-link-6.active {
     padding: 10px 0;
     margin-bottom: 10px
 }
+span.su-lightbox.col-md-12 {
+    text-align: center;
+}
