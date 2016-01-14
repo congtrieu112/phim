@@ -198,7 +198,7 @@ function vm_softcircles_scripts() {
     wp_enqueue_script('vm-respond', get_template_directory_uri() . '/js/respond.min.js', array(), '20120206', true);
     wp_enqueue_script('vm-main-script', get_template_directory_uri() . '/js/functions.js', array(), true);
     wp_enqueue_script('vm-sharing-buttons', THEME_JS . '/share-buttons.js', array(), true);
-    wp_enqueue_script( 'script-name', THEME_JS . '/process.js', array(), true );
+    wp_enqueue_script( 'script-name', THEME_JS . '/proccess.js', array(), true );
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -227,7 +227,7 @@ Plugin name: Strip WP Version in Stylesheets/Scripts
 */
 
 //add_filter( 'script_loader_src', 'remove_src_version' );
-//add_filter( 'style_loader_src', 'remove_src_version' );
+//add_filter( ' style_loader_src', 'remove_src_version' );
 
 function remove_src_version ( $src ) {
   return explode("?", $src)[0];
