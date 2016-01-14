@@ -2704,3 +2704,6 @@ span.su-lightbox.col-md-12 {
     padding: 10px 0;
     display : none;
 }
+li.likes {
+    cursor: pointer;
+}

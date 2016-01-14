@@ -71,57 +71,78 @@
 
       <!-- Video Player End --> 
       <!-- Video Stats and Sharing Start -->
+     
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 videoinfo">
-        <div class="row"> 
-          <!-- Uploader Start -->
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 uploader">
-            <figure> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php echo get_avatar(get_the_author_meta('ID'), 66, '', get_the_author_meta('user_nicename')); ?></a> </figure>
-            <div class="aboutuploader">
-              <h5>
-                <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
-                  <?php echo __('By ', THEME_TEXT_DOMAIN); ?>
-                  <?php echo get_the_author_meta('user_nicename'); ?>
-                </a>
-              </h5>
-              <time datetime="<?php echo the_time('d M Y'); ?>"><?php echo __('Uploaded : ', THEME_TEXT_DOMAIN); ?><?php echo the_time('d M Y'); ?></time>
-              <br />
-              <a class="btn btn-primary btn-xs backcolor" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">Watch All Videos</a> </div>
-          </div>
-          <!-- Uploader End --> 
-          <!-- Video Stats Start -->
-          <?php /* <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 stats">
-            <hr class="visible-xs" />
-            <ul>
-            <li class="likes">
-            <h5>Likes</h5>
-            <h2>250</h2>
-            </li>
-            <li class="views">
-            <h5>Views</h5>
-            <h2>70K</h2>
-            </li>
-            </ul>
-            </div> */ ?>
-          <!-- Video Stats End --> 
-          <!-- Video Share Start -->
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 videoshare">
-            <ul>
-              <li>
-                <div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-type="button_count"></div>
-              </li>
-              <li>
-                <a href="https://twitter.com/share/?url=<?php the_permalink(); ?>" class="twitter-share-button" data-via="bilalmallik">Tweet</a>
-              </li>
-              <li>
-                <div class="g-plus" data-action="share" data-href="<?php the_permalink(); ?>" data-annotation="bubble"></div>
-              </li>
-            </ul>
-          </div>
-          <!-- Video Share End --> 
-        </div>
-      </div>
+                    <div class="row"> 
+                        <!-- Uploader Start -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 stats">
+                            <hr class="visible-xs">
+                            <ul>
+                                <li class="likes switch">
+                                    <h5>Off lights</h5>
+                                    <i class="fa fa-lightbulb-o fa-2x"></i>
+                                </li>
+                                <div id='persoff'></div>
+                                <li class="views">
+                                    <h5>Comment</h5>
+                                    <h2>70K</h2>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Uploader End --> 
+                        <!-- Video Stats Start -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 stats">
+                            <hr class="visible-xs">
+                            <ul>
+                                <li class="likes">
+                                    <h5>Likes</h5>
+                                    <h2>250</h2>
+                                </li>
+                                <li class="views">
+                                    <h5>Views</h5>
+                                    <h2>70K</h2>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Video Stats End --> 
+                        <!-- Video Share Start -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 videoshare">
+                            <ul>
+                                <li class="facebook">
+                                    <i class="fa fa-facebook"></i>
+                                    <div class="shaingstats">
+                                        <h5>36K</h5>
+                                        <p>Shares</p>
+                                    </div>
+                                    <a href="http://www.facebook.com" class="link" target="_blank"></a>
+                                </li>
+                                <li class="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                    <div class="shaingstats">
+                                        <h5>15K</h5>
+                                        <p>Tweets</p>
+                                    </div>
+                                    <a href="http://www.twitter.com" class="link" target="_blank"></a>
+                                </li>
+                                <li class="gplus">
+                                    <i class="fa fa-google-plus"></i>
+                                    <div class="shaingstats">
+                                        <h5>7K</h5>
+                                        <p>Shares</p>
+                                    </div>
+                                    <a href="https://plus.google.com" class="link" target="_blank"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Video Share End --> 
+                    </div>
+                </div>
       <!-- Video Stats and Sharing End --> 
       <!-- Like This Video Start -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 likeit">
+                    <hr>
+                    <a class="btn btn-primary backcolor" href="#">Like This Video</a>
+                </div>
       <?php /* <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 likeit">
         <hr />
         <a class="btn btn-primary backcolor" href="#">Like This Video</a>
