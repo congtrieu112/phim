@@ -226,8 +226,8 @@ add_action("wp_default_styles", "my_wp_default_styles");
 Plugin name: Strip WP Version in Stylesheets/Scripts
 */
 
-add_filter( 'script_loader_src', 'remove_src_version' );
-add_filter( 'style_loader_src', 'remove_src_version' );
+//add_filter( 'script_loader_src', 'remove_src_version' );
+//add_filter( 'style_loader_src', 'remove_src_version' );
 
 function remove_src_version ( $src ) {
   return explode("?", $src)[0];
