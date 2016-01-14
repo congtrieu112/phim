@@ -167,8 +167,10 @@
 
 
                                     </div>
+                                    <div class="clearfix"></div>
+                                    <div class="process col-md-12"> <img src="<?php print get_template_directory_uri(); ?>/images/images/loading.gif"/> </div>
 <span class="su-lightbox col-md-12"  >
-    <a onclick="load_more();" id="number-0" href="<?php print  admin_url('admin-ajax.php'); ?>" data-nonce="<?php print wp_create_nonce("my_user_vote_nonce"); ?>" data-page="1" data-id="" class="load-more su-button su-button-style-default" style="color:#FFFFFF;background-color:#2D89EF;border-color:#246ebf;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_self">
+    <a onclick="load_more();" id="number-0" href="<?php print  admin_url('admin-ajax.php'); ?>" data-nonce="<?php print wp_create_nonce("my_user_vote_nonce"); ?>" data-page="1" data-id="" class="load-more su-button su-button-style-default" style="width:50%;text-align: center; color:#FFFFFF;background-color:#2D89EF;border-color:#246ebf;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_self">
         <span style="color:#FFFFFF;padding:0px 16px;font-size:13px;line-height:26px;border-color:#6cacf4;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none">
             Click Here to Watch the Video 
         </span>
@@ -230,8 +232,10 @@
 
 
                                 </div>
+                                <div class="clearfix"></div>
+                                <div class="process col-md-12"> <img src="<?php print get_template_directory_uri(); ?>/images/images/loading.gif"/> </div>
 <span class="su-lightbox col-md-12" >
-    <a onclick="load_more();" id="number-<?php print $cats[$cat]->term_id;  ?>" href="<?php print  admin_url('admin-ajax.php'); ?>" data-nonce="<?php print wp_create_nonce("my_user_vote_nonce"); ?>" data-page="1" data-id="<?php print $cats[$cat]->term_id;  ?>" class="load-more su-button su-button-style-default" style="color:#FFFFFF;background-color:#2D89EF;border-color:#246ebf;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_self">
+    <a onclick="load_more();" id="number-<?php print $cats[$cat]->term_id;  ?>" href="<?php print  admin_url('admin-ajax.php'); ?>" data-nonce="<?php print wp_create_nonce("my_user_vote_nonce"); ?>" data-page="1" data-id="<?php print $cats[$cat]->term_id;  ?>" class="load-more su-button su-button-style-default" style="width:50%;text-align: center; color:#FFFFFF;background-color:#2D89EF;border-color:#246ebf;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_self">
         <span style="color:#FFFFFF;padding:0px 16px;font-size:13px;line-height:26px;border-color:#6cacf4;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none">
             Click Here to Watch the Video 
         </span>

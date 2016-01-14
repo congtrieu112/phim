@@ -3,6 +3,7 @@ jQuery.noConflict();
   $(function() {
       $(".load-more").on("click",function(e){
           e.preventDefault();
+          $(".process.col-md-12").css("display","block");
           var url = $(this).attr('href');
           var nonce_field = $(this).data("nonce");
           var team_id = $(this).data("id");
@@ -14,6 +15,7 @@ jQuery.noConflict();
           $.post(url,data,function(e){
               $("#"+curent).attr("data-page", page  );
               views.append(e);
+              $(".process.col-md-12").css("display","none");
               
           });
          return false;

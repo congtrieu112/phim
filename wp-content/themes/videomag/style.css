@@ -2696,4 +2696,11 @@ a.tag-link-6.active {
 }
 span.su-lightbox.col-md-12 {
     text-align: center;
+    display:block;
+    padding: 20px 0;
+}
+.process.col-md-12 {
+    text-align: center;
+    padding: 10px 0;
+    display : none;
 }
