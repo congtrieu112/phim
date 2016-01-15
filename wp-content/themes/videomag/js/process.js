@@ -21,19 +21,9 @@ jQuery.noConflict();
          return false;
       });
       
-        $("#persoff").css("height", $(document).height()).hide();
-        $(document).click(function (e) {
-            if (!$(e.target).hasClass('switch') && per == 1) {
-                $("#persoff").toggle();
-                per = 0;
-            }
-        });
-        $(".switch").click(function () {
-            $("#persoff").toggle();
-            per += 1;
-            if (per == 2) {
-                per = 0;
-            }
+        $(".video-light").allofthelights();
+        $(".switch").on("click",function(){
+            $(".playeriframe").css("z-index",9999);
         });
   });
 })(jQuery);

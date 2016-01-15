@@ -199,10 +199,10 @@ function vm_softcircles_scripts() {
     wp_enqueue_script('vm-main-script', get_template_directory_uri() . '/js/functions.js', array(), true);
     wp_enqueue_script('vm-sharing-buttons', THEME_JS . '/share-buttons.js', array(), true);
     wp_enqueue_script( 'script-name', THEME_JS . '/proccess.js', array(), true );
-    if(is_singular('video')){
-        wp_enqueue_script( 'script-name-light', THEME_JS . '/jquery.allofthelights-min.js', array(), true );
-    }
 
+if(is_singular( 'video' ) ){
+    wp_enqueue_script( 'script-name-light', THEME_JS . '/jquery.allofthelights.js', array(), true );
+}
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
@@ -634,8 +634,42 @@ if (!function_exists('vm_comment')) :
 
   return $js;
 }
-
-
+function drive_get_quaty($linkf) {
+    $get = file_get_contents($linkf);
+  $cat = explode(',["fmt_stream_map","', $get);
+  $cat = explode('"]', $cat[1]);
+  $cat = explode(',', $cat[0]);
+  foreach ($cat as $link) {
+    $cat = explode('|', $link);
+    $links = str_replace(array('\u003d', '\u0026'), array('=', '&'), $cat[1]);
+    if ($cat[0] == 37) {
+      $f1080p = $links;
+    }
+    if ($cat[0] == 22) {
+      $f720p = $links;
+    }
+    if ($cat[0] == 59) {
+      $f480p = $links;
+    }
+    if ($cat[0] == 43) {
+      $f360p = $links;
+    }
+  }
+  if (isset($f1080p)) {
+    $res = 4;
+  }
+  elseif (isset($f720p)) {
+    $res = 3;
+  }
+  elseif (isset($f480p)) {
+    $res = 2;
+  }
+  else {
+    $res = 1;
+  }
+  return $res;
+  
+}
 
 function drive_direct($linkf) {
 

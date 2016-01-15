@@ -7,13 +7,13 @@
     <div class="row">
       <!-- Video Player Start -->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 playershadow">
-        <div class="playeriframe"> 
+        <div class="playeriframe "> 
           <?php if (!get_field('link_video', $post->ID)) { ?>
             <?php echo vm_get_video_player(vm_get_post_meta('_vm_videofield_option')); ?>
           <?php }
           else {
             ?>
-            <div id="show-video"></div>
+            <div id="show-video" ></div>
             <?php
             $paged = get_query_var('page', 1);
             $episode = 0;
@@ -82,10 +82,10 @@
                                     <h5>Off lights</h5>
                                     <i class="fa fa-lightbulb-o fa-2x"></i>
                                 </li>
-                                <div id='persoff'></div>
+                                
                                 <li class="views">
                                     <h5>Comment</h5>
-                                    <h2>70K</h2>
+                                    <h2> <?php print get_comment_count($post->ID)['total_comments'];?> </h2>
                                 </li>
                             </ul>
                         </div>
@@ -96,11 +96,11 @@
                             <ul>
                                 <li class="likes">
                                     <h5>Likes</h5>
-                                    <h2>250</h2>
+                                    <h2 class="lc-326 lc"><?php print GetWtiLikeCount($post->ID); ?></h2>
                                 </li>
                                 <li class="views">
                                     <h5>Views</h5>
-                                    <h2>70K</h2>
+                                    <h2><?php print ( $count_views = get_post_meta($post->ID,'views',true)) ? $count_views : 0; ; ?></h2>
                                 </li>
                             </ul>
                         </div>
@@ -141,7 +141,7 @@
       <!-- Like This Video Start -->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 likeit">
                     <hr>
-                    <a class="btn btn-primary backcolor" href="#">Like This Video</a>
+                    <a class="lbg-style1 like-326 jlk btn btn-primary backcolor" href="javascript:void(0)" data-task="like" data-post_id="<?php print $post->ID; ?>" data-nonce="<?php print wp_create_nonce("wti_like_post_vote_nonce"); ;?>" rel="nofollow" >Like This Video</a>
                 </div>
       <?php /* <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 likeit">
         <hr />
@@ -276,11 +276,29 @@
         $button_rapidgator = '<a target="_blank" href="' . $link_rapidgator . '" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> Download</span></a>';
         $button_datafile = '<a target="_blank" href="' . $link_datafile . '" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> Download</span></a>';
         $button_uploaded = '<a target="_blank" href="' . $link_uploaded . '" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> Download</span></a>';
-        $link_drive_dowload = ( $link_drives ) ? drive_direct_dowload($link_drives) :  "";
+        $link_drive_dowload =  "";
 
         $link_360 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=360" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 360</span></a>';
+        $link_480 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=480" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 480</span></a>';
         $link_720 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=720" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 720</span></a>';
         $link_1080 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=1080" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 1080</span></a>';
+        if($links = drive_get_quaty($link_drives)){
+            switch ($links){
+                case 4:
+                    $link_drive_dowload = array ($link_360,$link_480,$link_720,$link_1080);
+                    break;
+                case 3:
+                    $link_drive_dowload = array ($link_360,$link_480,$link_720);
+                    break;
+                case 2:
+                    $link_drive_dowload = array ($link_360,$link_480);
+                    break;
+                case 1:
+                    $link_drive_dowload = array ($link_360);
+                    break;
+                
+            }
+        }
         ?>
         <?php if ($link_rapidgator || $link_datafile || $link_uploaded || $link_drive_dowload) : ?>
           <div class="session row">
@@ -290,7 +308,7 @@
   <?php if ($link_drive_dowload) : ?>
               <div class="alert alert-warning alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong><?php echo __('Google drive', THEME_TEXT_DOMAIN); ?></strong> :  <?php print $link_360; ?> , <?php print $link_720; ?> , <?php print $link_1080; ?>
+                <strong><?php echo __('Google drive', THEME_TEXT_DOMAIN); ?></strong> :  <?php print implode('  ', $link_drive_dowload); ?>
               </div>
   <?php endif; ?>  
   <?php if ($link_rapidgator) : ?>

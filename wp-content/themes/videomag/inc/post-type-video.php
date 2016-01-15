@@ -163,11 +163,11 @@ if (!function_exists('vm_get_video_player')):
     function vm_get_video_player($url)
     {
 
-        $youtube_player = '<iframe id="ytplayer" type="text/html" width="750" height="447" '
+        $youtube_player = '<iframe class="video-light" id="ytplayer" type="text/html" width="750" height="447" '
             . 'src="http://www.youtube.com/embed/%video" frameborder="0" scrolling="no"></iframe>';
-        $vimeo_player = '<iframe src="http://player.vimeo.com/video%video" frameborder="0" '
+        $vimeo_player = '<iframe class="video-light"  src="http://player.vimeo.com/video%video" frameborder="0" '
             . 'webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-        $dailymotion_player = '<iframe src="http://www.dailymotion.com/embed/video/%video" '
+        $dailymotion_player = '<iframe  class="video-light" src="http://www.dailymotion.com/embed/video/%video" '
             . 'width="750" height="447" frameborder="0"></iframe>';
 
         $host = parse_url($url, PHP_URL_HOST);
