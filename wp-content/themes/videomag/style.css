@@ -2224,7 +2224,7 @@ a.gotop{
 }
 .blogdetail .blogtext .blogmetas ul li{
 	float: left;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 }
 .blogdetail .blogtext .blogmetas ul li:first-child{
 	margin-left: 0px;

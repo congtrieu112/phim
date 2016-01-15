@@ -21,7 +21,13 @@ jQuery.noConflict();
          return false;
       });
       $(".video-light").allofthelights();
+        
      
         
   });
 })(jQuery);
+
+
+
+
+    

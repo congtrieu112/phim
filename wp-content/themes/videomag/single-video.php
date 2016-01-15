@@ -106,37 +106,60 @@
                         </div>
                         <!-- Video Stats End --> 
                         <!-- Video Share Start -->
+                        <?php
+                        $count_face = $count_twitter = 0;
+                        if($json_face = file_get_contents('http://graph.facebook.com/?id='.  get_permalink($post->ID))){
+                            $json_face = json_decode($json_face);
+                            if(isset($json_face->shares)){
+                                $count_face = $json_face->shares;
+                            }
+                        }
+                        
+                        if($json_twitter = file_get_contents("http://opensharecount.com/count.json?url=". get_permalink($post->ID))){
+                            $json_twitter = json_decode($json_twitter);
+                            if(isset($json_twitter->count)){
+                                $count_twitter = $json_twitter->count;
+                            }
+                        }
+                        
+
+                        
+                        ?>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 videoshare">
                             <ul>
                                 <li class="facebook">
                                     <i class="fa fa-facebook"></i>
                                     <div class="shaingstats">
-                                        <h5>36K</h5>
+                                        <h5><?php print $count_face; ?></h5>
                                         <p>Shares</p>
                                     </div>
-                                    <a href="http://www.facebook.com" class="link" target="_blank"></a>
+                                    <a href="javascript:void(0)" onclick='poup_link("https://www.facebook.com/sharer.php?u=<?php print get_permalink($post->ID); ?>");' class="link" target="_blank"></a>
                                 </li>
                                 <li class="twitter">
                                     <i class="fa fa-twitter"></i>
                                     <div class="shaingstats">
-                                        <h5>15K</h5>
+                                        <h5><?php print $count_twitter; ?></h5>
                                         <p>Tweets</p>
                                     </div>
-                                    <a href="http://www.twitter.com" class="link" target="_blank"></a>
+                                    <a href="javascript:void(0)" onclick="poup_link('http://twitter.com/intent/tweet?source=sharethiscom&text=<?php print get_the_title($post->ID); ?>&url=<?php print get_permalink($post->ID); ?>');" class="link" target="_blank"></a>
                                 </li>
                                 <li class="gplus">
                                     <i class="fa fa-google-plus"></i>
                                     <div class="shaingstats">
-                                        <h5>7K</h5>
-                                        <p>Shares</p>
+                                        <p>Send a request</p>
                                     </div>
-                                    <a href="https://plus.google.com" class="link" target="_blank"></a>
+                                    <a href="javascript:void(0)" onclick="poup_link('<?php print home_url('/').'contact-us'; ?>')" class="link" target="_blank"></a>
                                 </li>
                             </ul>
                         </div>
                         <!-- Video Share End --> 
                     </div>
                 </div>
+      <script>
+          function poup_link(url) {
+            window.open(url, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=200, left=500, width=400, height=400");
+        }
+      </script>
       <!-- Video Stats and Sharing End --> 
       <!-- Like This Video Start -->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 likeit">
@@ -219,34 +242,41 @@
                     <div class="blogmetas">
 
                       <ul>
-                        <li>
+                          <li class="col-md-6">
                           <i class="fa fa-align-justify"></i>
                           <?php vm_get_video_categories(get_the_ID()); ?>
                         </li>
-                        <li>
-                          <i class="fa fa-globe"></i>
-                          <?php vm_get_video_categories(get_the_ID()); ?>
-                        </li>
-                        <li>
-                          <i class="fa fa-play-circle"></i>
-                          <?php vm_get_video_categories(get_the_ID()); ?>
-                        </li>
-                        <li>
-                          <i class="fa fa-user"></i>
-                          <?php vm_get_video_categories(get_the_ID()); ?>
-                        </li>
-                        
-                        <li>
-                          <i class="fa fa-video-camera"></i>
-                          <?php vm_get_video_categories(get_the_ID()); ?>
-                        </li>
-                        
-                        
-                        
 
-                        <li>
+
+                        <li class="col-md-6">
+                          <i class="fa fa fa-play-circle-o"></i>
+                          <?php print get_field('time_video',$post->ID); ?>
+                        </li>
+                      </ul>
+                        
+                        <ul>
+                          <li class="col-md-6">
+                          <i class="fa fa-globe"></i>
+                          <?php print get_field('country',$post->ID); ?>
+                        </li>
+
+                        <li class="col-md-6">
+                          <i class="fa fa-heart-o"></i>
+                          <?php print get_field('actress',$post->ID); ?>
+                        </li>
+                      </ul>
+                        
+                        
+                        <ul>
+                          <li class="col-md-6">
                           <i class="fa fa-tags"></i>
                           <?php the_tags(', '); ?>
+                        </li>
+
+
+                        <li class="col-md-6">
+                          <i class="fa fa-video-camera"></i>
+                          <?php print get_field('resolution',$post->ID); ?>
                         </li>
                       </ul>
                       <div class="clearfix"></div>
@@ -282,7 +312,7 @@
         $link_480 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=480" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 480</span></a>';
         $link_720 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=720" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 720</span></a>';
         $link_1080 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=1080" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 1080</span></a>';
-        if($links = drive_get_quaty($link_drives)){
+        if($link_drives && $links = drive_get_quaty($link_drives)){
             switch ($links){
                 case 4:
                     $link_drive_dowload = array ($link_360,$link_480,$link_720,$link_1080);
