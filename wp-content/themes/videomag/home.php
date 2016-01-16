@@ -85,20 +85,7 @@
 
                 <div>
                     <?php
-                    $args = array(
-                        'type' => 'video',
-                        'child_of' => 0,
-                        'parent' => '',
-                        'orderby' => 'name',
-                        'order' => 'ASC',
-                        'hide_empty' => 1,
-                        'hierarchical' => 1,
-                        'exclude' => '',
-                        'include' => '',
-                        'number' => '',
-                        'taxonomy' => 'video_categories',
-                        'pad_counts' => false
-                    );
+
                     $cats = get_home_top(908,'home_cat','cat_limit','cat_homes');
                     $cats = array_shift($cats);
 
@@ -140,7 +127,7 @@
                                                 $time = (get_field('time_video', $post->ID)) ? get_field('time_video', $post->ID) : '0 : 00';
                                                 ?>
 
-                                                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                                                     <!-- Video Box Start -->
                                                     <div class="videobox2">
                                                         <figure>
@@ -211,7 +198,7 @@
                                             $time = (get_field('time_video', $post->ID)) ? get_field('time_video', $post->ID) : '0 : 00';
                                             ?>
 
-                                            <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                                                 <!-- Video Box Start -->
                                                 <div class="videobox2">
                                                     <figure>
