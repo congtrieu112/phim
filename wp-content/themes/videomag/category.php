@@ -29,8 +29,11 @@
                                             <!-- Video Thumbnail Start --> 
                                             <a href="<?php echo get_the_permalink() ?>">
                                                 <?php if (has_post_thumbnail()): ?>
+                                                  <!--image size-->
+                                                    <!--326 x 183-->
+                                                    <!--size medium 652 x 366-->
                                                     <?php $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'single-post-thumbnail'); ?> 
-                                                    <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" />
+                                                    <img src="<?php echo get_bfithumb(652, 366, $thumbnail[0]); ?>" alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" />
                                                 <?php endif; ?>
                                             </a> 
                                         </figure>
