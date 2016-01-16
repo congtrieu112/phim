@@ -54,7 +54,7 @@ if (!function_exists('vm_get_video_categories')):
         $cateogires_object = wp_get_post_terms(get_the_ID(), 'video_categories');
 
         foreach ($cateogires_object as $cobject) {
-            $categories[] = $cobject->name;
+            $categories[] = "<a href='".get_category_link($cobject->term_id)."'>".$cobject->name."</a>";
         }
 
         echo implode(', ', $categories);
