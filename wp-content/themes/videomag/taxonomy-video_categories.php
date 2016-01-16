@@ -51,7 +51,7 @@
                                             <!-- Video Info End --> 
                                         </figure>
                                         <!-- Video Title Start -->
-                                        <h4><a href="<?php the_permalink(); ?>"><?php catchuoi(get_the_title(), 40); ?></a></h4>
+                                        <h4><a href="<?php the_permalink(); ?>"><?php print catchuoi(get_the_title(), 30); ?></a></h4>
                                         <!-- Video Title End --> 
                                     </div>
                                     <!-- Video Box End --> 

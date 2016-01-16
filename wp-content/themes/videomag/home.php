@@ -148,7 +148,7 @@
                                                             <!-- Video Thumbnail End -->
                                                         </figure>
                                                         <!-- Video Title -->
-                                                        <h4><a href="<?php print get_permalink($post->ID); ?>"><?php print catchuoi($post->post_title, 40); ?></a></h4>
+                                                        <h4><a href="<?php print get_permalink($post->ID); ?>"><?php print catchuoi($post->post_title, 30); ?></a></h4>
                                                         <!-- Video Title -->
                                                     </div>
                                                     <!-- Video Box End -->
@@ -219,7 +219,7 @@
                                                         <!-- Video Thumbnail End -->
                                                     </figure>
                                                     <!-- Video Title -->
-                                                    <h4><a href="<?php print get_permalink(get_the_ID()); ?>"><?php print catchuoi(get_the_title(), 40); ?></a></h4>
+                                                    <h4><a href="<?php print get_permalink(get_the_ID()); ?>"><?php print catchuoi(get_the_title(), 30); ?></a></h4>
                                                     <!-- Video Title -->
                                                 </div>
                                                 <!-- Video Box End -->
