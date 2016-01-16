@@ -24,7 +24,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-md-6">
                     <h1 class="heading">Sliders</h1>
-                    <?php $block_home_1 = implode(',', get_hom_top(870)); ?>
+                    <?php $block_home_1 = implode(',', get_home_top(870,'block_homes','limit_home','block_home')); ?>
                     <?php echo do_shortcode('[su_slider source="video: ' . $block_home_1 . '" link="post"]'); ?>              
 
 
@@ -32,12 +32,12 @@
                 <div class="col-md-6">
                     <!-- Contents Section Started -->
                     <div class="sections">
-                        <h2 class="heading">Funny</h2>
+                        <h2 class="heading"><?php _e(' Funny', 'videomagazine'); ?></h2>
                         <div class="clearfix"></div>
                         <div class="row">
 
                             <?php
-                            $block_home_2 = get_hom_top(871);
+                            $block_home_2 = get_home_top(871,'block_homes','limit_home','block_home');
                             for ($block2 = 0; $block2 < count($block_home_2); $block2++) :
                                 $post2 = get_post($block_home_2["$block2"]);
                                 $image = (wp_get_attachment_image_src(get_post_thumbnail_id($post2->ID), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($post2->ID), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
@@ -99,24 +99,28 @@
                         'taxonomy' => 'video_categories',
                         'pad_counts' => false
                     );
-                    $cats = get_categories($args);
+                    $cats = get_home_top(908,'home_cat','cat_limit','cat_homes');
+                    $cats = array_shift($cats);
+
                     for ($cat = 0; $cat < count($cats); $cat++):
+                        $cat_info = get_term($cats[$cat],'video_categories');
                         ?>
                         <?php if ($cat == 0) : ?>
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">All video</a>
+                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab"><?php _e(' All video', 'videomagazine'); ?> </a>
                                 </li>
 
                             <?php endif; ?>
 
-                            <li role="presentation"><a href="#<?php print $cats[$cat]->slug; ?>" aria-controls="<?php print $cats[$cat]->slug; ?>" role="tab" data-toggle="tab" ><?php print $cats[$cat]->name; ?></a></li>
+                            <li role="presentation"><a href="#<?php print $cat_info->slug; ?>" aria-controls="<?php print $cat_info->slug; ?>" role="tab" data-toggle="tab" ><?php print $cat_info->name; ?></a></li>
                             <?php if ($cat == count($cats) - 1) : ?>
                             </ul>
                         <?php endif; ?>
                     <?php endfor; ?>
                     <?php for ($cat = 0; $cat < count($cats); $cat++): ?>
+                            <?php $cat_info = get_term($cats[$cat],'video_categories'); ?>
                         <?php if ($cat == 0) : ?>
                             <!-- Tab panes -->
                             <div class="tab-content">
@@ -141,8 +145,12 @@
                                                     <div class="videobox2">
                                                         <figure>
                                                             <!-- Video Thumbnail Start --> 
-                                                            <a href="<?php print get_permalink($post->ID); ?>">
-                                                                <img src="<?php print $image; ?>" alt="<?php print the_title(); ?>" class="img-responsive hovereffect">
+                                                            <a href="<?php print get_permalink(get_the_ID()); ?>">
+                                                                <!--image size-->
+                                                                <!--207 x 138-->
+                                                                <!--size medium 414 x 276-->
+
+                                                                <img src="<?php print get_bfithumb(414, 276, $image); ?>" alt="<?php print the_title(); ?>" class="img-responsive hovereffect">
                                                             </a>
                                                             <div class="vidopts">
                                                                 <ul>
@@ -169,18 +177,18 @@
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="process col-md-12"> <img src="<?php print get_template_directory_uri(); ?>/images/images/loading.gif"/> </div>
-<span class="su-lightbox col-md-12"  >
-    <a onclick="load_more();" id="number-0" href="<?php print  admin_url('admin-ajax.php'); ?>" data-nonce="<?php print wp_create_nonce("my_user_vote_nonce"); ?>" data-page="1" data-id="" class="load-more su-button su-button-style-default" style="width:50%;text-align: center; color:#FFFFFF;background-color:#2D89EF;border-color:#246ebf;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_self">
-        <span style="color:#FFFFFF;padding:0px 16px;font-size:13px;line-height:26px;border-color:#6cacf4;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none">
-            <?php _e(' Click More Video ','videomagazine'); ?> 
-        </span>
-    </a>
-        
-</span>
+                                    <span class="su-lightbox col-md-12"  >
+                                        <a onclick="load_more();" id="number-0" href="<?php print admin_url('admin-ajax.php'); ?>" data-nonce="<?php print wp_create_nonce("my_user_vote_nonce"); ?>" data-page="1" data-id="" class="load-more su-button su-button-style-default" style="width:50%;text-align: center; color:#FFFFFF;background-color:#2D89EF;border-color:#246ebf;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_self">
+                                            <span style="color:#FFFFFF;padding:0px 16px;font-size:13px;line-height:26px;border-color:#6cacf4;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none">
+                                                <?php _e(' Click More Video ', 'videomagazine'); ?> 
+                                            </span>
+                                        </a>
+
+                                    </span>
                                 </div>
                             <?php endif; ?>
-                            <div role="tabpanel" class="tab-pane " id="<?php print $cats[$cat]->slug; ?>">
-                                <div id="load-more-<?php print $cats[$cat]->term_id;  ?>">
+                            <div role="tabpanel" class="tab-pane " id="<?php print $cat_info->slug; ?>">
+                                <div id="load-more-<?php print $cat_info->term_id; ?>">
                                     <?php
                                     $array = array(
                                         'post_type' => 'video',
@@ -191,7 +199,7 @@
                                             array(
                                                 'taxonomy' => 'video_categories',
                                                 'field' => 'id',
-                                                'terms' => $cats[$cat]->term_id
+                                                'terms' => $cat_info->term_id
                                             ),
                                         ),
                                         'posts_per_page' => 10,
@@ -209,7 +217,11 @@
                                                     <figure>
                                                         <!-- Video Thumbnail Start --> 
                                                         <a href="<?php print get_permalink(get_the_ID()); ?>">
-                                                            <img src="<?php print $image; ?>" alt="<?php print the_title(); ?>" class="img-responsive hovereffect">
+                                                            <!--image size-->
+                                                            <!--207 x 138-->
+                                                            <!--size medium 414 x 276-->
+                                                            
+                                                            <img src="<?php print get_bfithumb(414, 276, $image) ; ?>" alt="<?php print the_title(); ?>" class="img-responsive hovereffect">
                                                         </a>
                                                         <div class="vidopts">
                                                             <ul>
@@ -234,14 +246,14 @@
                                 </div>
                                 <div class="clearfix"></div>
                                 <div class="process col-md-12"> <img src="<?php print get_template_directory_uri(); ?>/images/images/loading.gif"/> </div>
-<span class="su-lightbox col-md-12" >
-    <a onclick="load_more();" id="number-<?php print $cats[$cat]->term_id;  ?>" href="<?php print  admin_url('admin-ajax.php'); ?>" data-nonce="<?php print wp_create_nonce("my_user_vote_nonce"); ?>" data-page="1" data-id="<?php print $cats[$cat]->term_id;  ?>" class="load-more su-button su-button-style-default" style="width:50%;text-align: center; color:#FFFFFF;background-color:#2D89EF;border-color:#246ebf;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_self">
-        <span style="color:#FFFFFF;padding:0px 16px;font-size:13px;line-height:26px;border-color:#6cacf4;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none">
-            <?php _e(' Click More Video ','videomagazine'); ?> 
-        </span>
-    </a>
-        
-</span>
+                                <span class="su-lightbox col-md-12" >
+                                    <a onclick="load_more();" id="number-<?php print $cat_info->term_id; ?>" href="<?php print admin_url('admin-ajax.php'); ?>" data-nonce="<?php print wp_create_nonce("my_user_vote_nonce"); ?>" data-page="1" data-id="<?php print $cat_info->term_id; ?>" class="load-more su-button su-button-style-default" style="width:50%;text-align: center; color:#FFFFFF;background-color:#2D89EF;border-color:#246ebf;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_self">
+                                        <span style="color:#FFFFFF;padding:0px 16px;font-size:13px;line-height:26px;border-color:#6cacf4;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none">
+                                            <?php _e(' Click More Video ', 'videomagazine'); ?> 
+                                        </span>
+                                    </a>
+
+                                </span>
                             </div>
 
 
@@ -265,7 +277,7 @@
                 <div class="clearfix"></div>
                 <div class="row">
                     <?php
-                    $block_home_adv = get_hom_top(874);
+                    $block_home_adv = get_home_top(874,'block_homes','limit_home','block_home');
                     if ($block_home_adv) :
                         for ($block_adv = 0; $block_adv < count($block_home_adv); $block_adv++) :
                             $post_adv = get_post($block_home_adv["$block_adv"]);

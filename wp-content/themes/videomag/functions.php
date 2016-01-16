@@ -795,16 +795,16 @@ function curl($url) {
  * @param int $block_id 
  * @return array id .
  */
-function get_hom_top($block_id) {
+function get_home_top($block_id,$field_name,$field_limit,$sub_field) {
   $block = get_post($block_id);
   $arrid = array();
-  $max_items = (int)get_field('limit_home', $block->ID);
+  $max_items = (int)get_field($field_limit, $block->ID);
   $count = 0;
-  if (have_rows('block_homes', $block->ID)) {
-    while ($count < $max_items && have_rows('block_homes', $block->ID)) {
+  if (have_rows($field_name, $block->ID)) {
+    while ($count < $max_items && have_rows($field_name, $block->ID)) {
       the_row();
       $count++;
-      $video_id = get_sub_field('block_home');
+      $video_id = get_sub_field($sub_field);
       if ($video_id) {
         $arrid[] = $video_id;
       }
@@ -1055,7 +1055,11 @@ function load_more() {
                         <figure>
                             <!-- Video Thumbnail Start --> 
                             <a href="<?php print get_permalink(get_the_ID()); ?>">
-                                <img src="<?php print $image; ?>" alt="<?php print the_title(); ?>" class="img-responsive hovereffect">
+                                <!--image size-->
+                                <!--207 x 138-->
+                                <!--size medium 414 x 276-->
+
+                                <img src="<?php print get_bfithumb(414, 276, $image); ?>" alt="<?php print the_title(); ?>" class="img-responsive hovereffect">
                             </a>
                             <div class="vidopts">
                                 <ul>
@@ -1088,3 +1092,5 @@ function check_input_field($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
+
