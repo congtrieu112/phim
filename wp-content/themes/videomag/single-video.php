@@ -313,20 +313,8 @@
         $link_720 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=720" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 720</span></a>';
         $link_1080 = '<a target="_blank" href="' . get_home_url() . '/dowload/?id=' . $post->ID . '&&tap=' . $episode . '&&quaty=1080" class="su-button su-button-style-3d" style="color:#FFFFFF;background-color:#D10909;border-color:#a70707;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" ><span style="color:#FFFFFF;padding:6px 18px;font-size:14px;line-height:21px;border-color:#df5353;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="fa fa-check-circle" style="font-size:14px;color:#FFFFFF"></i> 1080</span></a>';
         if($link_drives && $links = drive_get_quaty($link_drives)){
-            switch ($links){
-                case 4:
-                    $link_drive_dowload = array ($link_360,$link_480,$link_720,$link_1080);
-                    break;
-                case 3:
-                    $link_drive_dowload = array ($link_360,$link_480,$link_720);
-                    break;
-                case 2:
-                    $link_drive_dowload = array ($link_360,$link_480);
-                    break;
-                case 1:
-                    $link_drive_dowload = array ($link_360);
-                    break;
-                
+            foreach ($links as $all_links){
+                $link_drive_dowload .= ${'link_'.$all_links} ."&nbsp;&nbsp;";
             }
         }
         ?>
@@ -338,7 +326,7 @@
   <?php if ($link_drive_dowload) : ?>
               <div class="alert alert-warning alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong><?php echo __('Google drive', THEME_TEXT_DOMAIN); ?></strong> :  <?php print implode('  ', $link_drive_dowload); ?>
+                <strong><?php echo __('Google drive', THEME_TEXT_DOMAIN); ?></strong> :  <?php print $link_drive_dowload; ?>
               </div>
   <?php endif; ?>  
   <?php if ($link_rapidgator) : ?>

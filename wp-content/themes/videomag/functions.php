@@ -634,47 +634,50 @@ if (!function_exists('vm_comment')) :
 
   return $js;
 }
-function drive_get_quaty($linkf) {
-    $get = file_get_contents($linkf);
-  $cat = explode(',["fmt_stream_map","', $get);
-  $cat = explode('"]', $cat[1]);
-  $cat = explode(',', $cat[0]);
-  foreach ($cat as $link) {
-    $cat = explode('|', $link);
-    $links = str_replace(array('\u003d', '\u0026'), array('=', '&'), $cat[1]);
-    if ($cat[0] == 37) {
-      $f1080p = $links;
+function drive_get_quaty($url) {
+    $get = file_get_contents($url);
+    $cat = explode(',["fmt_stream_map","', $get);
+    $cat = explode('"]', $cat[1]);
+    $cat = explode(',', $cat[0]);
+    foreach ($cat as $link) {
+        $cat = explode('|', $link);
+        $links = str_replace(array('\u003d', '\u0026'), array('=', '&'), $cat[1]);
+        if ($cat[0] == 37) {
+            $f1080p = $links;
+        }
+        if ($cat[0] == 22) {
+            $f720p = $links;
+        }
+        if ($cat[0] == 59) {
+            $f480p = $links;
+        }
+        if ($cat[0] == 43) {
+            $f360p = $links;
+        }
     }
-    if ($cat[0] == 22) {
-      $f720p = $links;
+    $res = array();
+    if (isset($f1080p)) {
+        $res[] .= ($f360p) ? '360' : '';
+        $res[] .= ($f480p) ? '480' : '';
+        $res[] .= ($f720p) ? '720' : '';
+        $res[] .= ($f1080p) ? '1080' : '';
+    } elseif (isset($f720p)) {
+        $res[] .= ($f360p) ? '360' : '';
+        $res[] .= ($f480p) ? '480' : '';
+        $res[] .= ($f720p) ? '720' : '';
+    } elseif (isset($f480p)) {
+        $res[] .= ($f360p) ? '360' : '';
+        $res[] .= ($f480p) ? '480' : '';
+    } else {
+        $res[] .= ($f360p) ? '360' : '';
     }
-    if ($cat[0] == 59) {
-      $f480p = $links;
-    }
-    if ($cat[0] == 43) {
-      $f360p = $links;
-    }
-  }
-  if (isset($f1080p)) {
-    $res = 4;
-  }
-  elseif (isset($f720p)) {
-    $res = 3;
-  }
-  elseif (isset($f480p)) {
-    $res = 2;
-  }
-  else {
-    $res = 1;
-  }
-  return $res;
-  
+    return $res;
 }
 
-function drive_direct($linkf) {
+function drive_direct($url) {
 
 
-  $get = file_get_contents($linkf);
+  $get = file_get_contents($url);
   $cat = explode(',["fmt_stream_map","', $get);
   $cat = explode('"]', $cat[1]);
   $cat = explode(',', $cat[0]);
@@ -695,24 +698,22 @@ function drive_direct($linkf) {
     }
   }
   if (isset($f1080p)) {
-    $res = '{file: "' . $f480p . '",type:"mp4",label: "480p"},
-        {file: "' . $f360p . '",type:"mp4",label: "360p"},
-                   
-                    {file: "' . $f720p . '",type:"mp4",label: "720p"},
-                    {file: "' . $f1080p . '",type:"mp4",label: "1080p"}';
+    $res .= ($f480p) ? '{file: "' . $f480p . '",type:"mp4",label: "480p"},' : '';
+    $res .= ($f360p) ? '{file: "' . $f360p . '",type:"mp4",label: "360p"},' : '';
+    $res .= ($f360p) ? '{file: "' . $f720p . '",type:"mp4",label: "720p"},' : '';
+    $res .= ($f1080p) ? '{file: "' . $f1080p . '",type:"mp4",label: "1080p"}' : '';
   }
   elseif (isset($f720p)) {
-    $res = '
-                    {file: "' . $f480p . '",type:"mp4",label: "480p"},
-                      {file: "' . $f360p . '",type:"mp4",label: "360p"},
-                    {file: "' . $f720p . '",type:"mp4",label: "720p"}';
+    $res .= ($f480p) ? '{file: "' . $f480p . '",type:"mp4",label: "480p"},' : '';
+    $res .= ($f360p) ? '{file: "' . $f360p . '",type:"mp4",label: "360p"},' : '';
+    $res .= ($f360p) ? '{file: "' . $f720p . '",type:"mp4",label: "720p"}'  : '';
   }
   elseif (isset($f480p)) {
-    $res = '{file: "' . $f480p . '",type:"mp4",label: "480p"},
-        {file: "' . $f360p . '",type:"mp4",label: "360p"}';
+    $res .= ($f480p) ? '{file: "' . $f480p . '",type:"mp4",label: "480p"},' : '';
+    $res .= ($f360p) ? '{file: "' . $f360p . '",type:"mp4",label: "360p"}'  : '';
   }
   else {
-    $res = '{file: "' . $f360p . '",type:"mp4"}';
+    $res .= ($f360p) ? '{file: "' . $f360p . '",type:"mp4",label: "360p"}'  : '';
   }
   return $res;
 }
@@ -758,15 +759,14 @@ function get_face_video($link) {
   $SD = str_replace('\/', '/', $SD[0]);
 
   if ($HD) {
-    $js .= '{file: "' . $SD . '",type:"mp4",label: "360p",default: "true"},
-                {file: "' . $HD . '",type:"mp4",label: "720p"}';
+    $js .= ($SD) ? '{file: "' . $SD . '",type:"mp4",label: "360p",default: "true"},' : '';
+    $js .= ($HD) ? '{file: "' . $HD . '",type:"mp4",label: "720p"}' : '';
   }
   else {
-    $js .= '{file: "' . $SD . '",type:"mp4"}';
+    $js .= ($SD) ? '{file: "' . $SD . '",type:"mp4"}' : '';
   }
 
   return $js;
-//return $l;
 }
 
 function curl($url) {
