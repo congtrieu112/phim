@@ -189,7 +189,7 @@
                                                 'terms' => $cat_info->term_id
                                             ),
                                         ),
-                                        'posts_per_page' => 10,
+                                        'posts_per_page' => 40,
                                     );
                                     $query = new WP_Query($array);
                                     if ($query->have_posts()):

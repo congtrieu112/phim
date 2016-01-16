@@ -1027,12 +1027,12 @@ function load_more() {
                 ),
             ),
             'paged' => $_POST['page'],
-            'posts_per_page' => 10,
+            'posts_per_page' => 40,
         );
     } else {
         $array = array(
             'post_type' => 'video',
-            'posts_per_page' => 10,
+            'posts_per_page' => 40,
             'paged' => $_POST['page'],
         );
     }
@@ -1049,7 +1049,7 @@ function load_more() {
             $time = (get_field('time_video', $post->ID)) ? get_field('time_video', $post->ID) : '0 : 00';
             ?>
 
-                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <!-- Video Box Start -->
                     <div class="videobox2">
                         <figure>
