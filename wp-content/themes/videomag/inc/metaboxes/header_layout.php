@@ -36,7 +36,7 @@ function vm_headerlayout_meta_box_render( $post ) {
 	 * from the database and use the value for the form.
 	 */
 	$value = get_post_meta( $post->ID, '_vm_headerlayout_option', true );
-        $value = empty($value) ? 'default_light' : $value;
+        $value = empty($value) ? 'default_dark' : $value;
         
 	echo '<label for="vm_headerlayout_option">';
 	_e( 'Select header layout for this page.', 'vm_softcircles_domain' );
