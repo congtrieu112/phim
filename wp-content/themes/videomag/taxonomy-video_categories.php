@@ -29,8 +29,15 @@
                                     <div <?php post_class('videobox2'); ?>>
                                         <figure> 
                                             <!-- Video Thumbnail Start --> 
+                                            
+                                            
+                                            <!--image size-->
+                                                    <!--326 x 183-->
+                                                    <!--size medium 652 x 366-->
+                                                   <?php $image = (wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg'; ?>
+                                                    
                                             <a href="<?php the_permalink(); ?>">
-                                                <img src="<?php echo vm_get_video_post_thumbnail(get_the_ID()); ?>" class="img-responsive hovereffect" alt="<?php the_title(); ?>" />
+                                                <img src="<?php echo get_bfithumb(652, 366, $image); ?>" class="img-responsive hovereffect" alt="<?php the_title(); ?>" />
                                             </a> 
                                             <!-- Video Thumbnail End --> 
                                             <!-- Video Info Start -->

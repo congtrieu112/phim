@@ -30,8 +30,12 @@ $vm_query = new WP_Query($args);
                     <div class="videobox2">
                         <figure> 
                             <!-- Video Thumbnail Start --> 
+                            <!--image size-->
+                            <!--210 x 118-->
+                            <!--size medium 420 x 236-->
+                            <?php $image = (wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg'; ?>
                             <a href="<?php echo get_the_permalink() ?>">
-                                <img alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" src="<?php echo vm_get_video_post_thumbnail(get_the_ID()); ?>" />
+                                <img alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" src="<?php echo get_bfithumb(420, 236, $image);  ?>" />
                             </a> 
                             <!-- Video Thumbnail End --> 
                             <!-- Video Info Start -->

@@ -32,8 +32,8 @@
                                                   <!--image size-->
                                                     <!--326 x 183-->
                                                     <!--size medium 652 x 366-->
-                                                    <?php $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'single-post-thumbnail'); ?> 
-                                                    <img src="<?php echo get_bfithumb(652, 366, $thumbnail[0]); ?>" alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" />
+                                                    <?php $image = (wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg'; ?>
+                                                    <img src="<?php echo get_bfithumb(652, 366, $image); ?>" alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" />
                                                 <?php endif; ?>
                                             </a> 
                                         </figure>
