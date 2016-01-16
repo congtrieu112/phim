@@ -16,22 +16,34 @@
                     <div class="clearfix"></div>
                     <div class="row">
                         <?php if (have_posts()) : ?>
-                            <?php while (have_posts()) : the_post(); ?>
-                                <?php $post_type = get_post_type(get_the_ID()); ?>
-                                <?php if ($post_type == 'video'): ?>
-                                    <?php $video_data = vm_get_videothumbnail(get_post_meta(get_the_ID(), '_vm_videofield_option', true)); ?>
-                                <?php endif; ?>
-
-                                <div <?php post_class('col-lg-12 col-md-12 col-sm-12 col-xs-12'); ?>>
-                                    <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-                                    <ul>
-                                        <li><i class="fa fa-calendar"></i><?php the_time('d-m-Y'); ?></li>
-                                        <li><i class="fa fa-user"></i><?php the_author(); ?></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix"></div>
-
-                            <?php endwhile; ?>
+                       
+                            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6"> 
+                                    <div <?php post_class('blogposttwo'); ?>>
+                                        <figure> 
+                                            <!-- Video Thumbnail Start --> 
+                                            <a href="<?php echo get_the_permalink() ?>">
+                                                <?php if (has_post_thumbnail()): ?>
+                                                    <?php $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'single-post-thumbnail'); ?> 
+                                                    <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" />
+                                                <?php endif; ?>
+                                            </a> 
+                                        </figure>
+                                        <div class="text">
+                                            <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+                                            <ul>
+                                                <li><i class="fa fa-calendar"></i><?php the_time('d-m-Y'); ?></li>
+                                                <li>
+                                                    <i class="fa fa-align-justify"></i>
+                                                    <?php the_category(', '); ?>
+                                                </li>
+                                            </ul>
+                                            <a href="<?php the_permalink() ?>" class="btn btn-primary btn-xs backcolor"><?php echo __('Read More', 'vm_softcircles_domain'); ?></a>
+                                        </div>
+                                    </div>
+                                    <!-- Video Box End --> 
+                                    <div class="clearfix"></div>
+                                </div>    
+                                
                         <?php else: ?>
                             <div class="col-lg-12 col-md-14 col-sm-14 col-xs-16">
                                 <p><?php echo __('Sorry! There are no posts.', THEME_TEXT_DOMAIN); ?></p>
