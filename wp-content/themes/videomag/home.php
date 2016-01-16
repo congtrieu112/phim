@@ -116,7 +116,7 @@
                                         <?php
                                         $arr = array(
                                             'post_type' => 'video',
-                                            'posts_per_page' => 10,
+                                            'posts_per_page' => 40,
                                         );
 //                                        die(1233);
                                         $query = new WP_Query($arr);
