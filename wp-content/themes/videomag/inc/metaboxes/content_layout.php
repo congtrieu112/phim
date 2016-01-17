@@ -36,7 +36,7 @@ function vm_contentlayout_meta_box_render( $post ) {
 	 * from the database and use the value for the form.
 	 */
 	$value = get_post_meta( $post->ID, '_vm_contentlayout_option', true );
-        $value = empty($value) ? '3cl' : $value;
+        $value = empty($value) ? '2cr' : $value;
         ?>
 	<label for="vm_contentlayout_option"><?php _e( 'Select page layout.', 'vm_softcircles_domain' );?></label>
         <br />
