@@ -734,7 +734,7 @@ class Su_Tools {
 				// Thumbnail isn't set, go to next post
 				if ( !is_numeric( $thumb ) ) continue;
 				$slide = array(
-					'image' => wp_get_attachment_url( $thumb ),
+					'image' => (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg',//wp_get_attachment_url( $thumb ),
 					'link'  => '',
 					'title' => get_the_title( $post->ID )
 				);
