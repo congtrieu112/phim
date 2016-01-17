@@ -1016,15 +1016,15 @@ class Su_Shortcodes {
 			// Create slides
 			foreach ( $slides as $slide ) {
 				// Crop the image
-				$image = su_image_resize( $slide['image'], $atts['width'], $atts['height'] );
+				$image = get_bfithumb($atts['width'], $atts['height'],$slide['image']);//su_image_resize( $slide['image'], $atts['width'], $atts['height'] );
 				// Prepare slide title
 				$title = ( $atts['title'] === 'yes' && $slide['title'] ) ? '<span class="su-slider-slide-title">' . stripslashes( $slide['title'] ) . '</span>' : '';
 				// Open slide
 				$return .= '<div class="su-slider-slide">';
 				// Slide content with link
-				if ( $slide['link'] ) $return .= '<a href="' . $slide['link'] . '"' . $target . 'title="' . esc_attr( $slide['title'] ) . '"><img src="' . $image['url'] . '" alt="' . esc_attr( $slide['title'] ) . '" />' . $title . '</a>';
+				if ( $slide['link'] ) $return .= '<a href="' . $slide['link'] . '"' . $target . 'title="' . esc_attr( $slide['title'] ) . '"><img src="' . $image . '" alt="' . esc_attr( $slide['title'] ) . '" />' . $title . '</a>';
 				// Slide content without link
-				else $return .= '<a><img src="' . $image['url'] . '" alt="' . esc_attr( $slide['title'] ) . '" />' . $title . '</a>';
+				else $return .= '<a><img src="' . $image. '" alt="' . esc_attr( $slide['title'] ) . '" />' . $title . '</a>';
 				// Close slide
 				$return .= '</div>';
 			}
