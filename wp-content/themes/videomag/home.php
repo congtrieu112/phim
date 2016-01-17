@@ -48,7 +48,9 @@
             <?php if ($censored = (get_field('censored', $block_slide[$slide]))) : ?>
                 <div class="discount-tag"><?php print _e('che', 'videomagazine') ?></div>
             <?php endif; ?>
-            <img src="<?php print $image ;?>" alt="Chania">
+                <!--660x326-->
+                <!--medium size 1320 x 652 -->
+                <img src="<?php print get_bfithumb(1320, 652, $image)  ;?>" alt="Chania">
         </a>
     </div>
       <?php } ?>
