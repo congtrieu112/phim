@@ -30,6 +30,9 @@
         <![endif]-->
         <script type="text/javascript" src="http://content.jwplatform.com/libraries/h2dPfFWZ.js"></script>
     <script type="text/javascript">jwplayer.key = 'H9xTsh9D62dkv+MYY96fdzM8RhYZCIlEKrYe+OxlxbM='</script>
+    <script type=text/javascript>
+        var SINGLE_VIDEO = <?php print (is_singular( 'video' )) ? 1 : 0; ?>
+    </script>
         <?php wp_head(); ?>
     </head>
 

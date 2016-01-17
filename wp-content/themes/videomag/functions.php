@@ -198,10 +198,12 @@ function vm_softcircles_scripts() {
     wp_enqueue_script('vm-respond', get_template_directory_uri() . '/js/respond.min.js', array(), '20120206', true);
     wp_enqueue_script('vm-main-script', get_template_directory_uri() . '/js/functions.js', array(), true);
     wp_enqueue_script('vm-sharing-buttons', THEME_JS . '/share-buttons.js', array(), true);
-    wp_enqueue_script( 'script-name', THEME_JS . '/proccess.js', array(), true );
+    wp_enqueue_script('script-name', get_template_directory_uri() . '/js/proccess.js', array(), '262', true);
+
+   // wp_register_script( 'script-name', THEME_JS . '/proccess.js', array( 'jquery' ), '1.1', true );
 
 if(is_singular( 'video' ) ){
-    wp_enqueue_script( 'script-name-light', THEME_JS . '/jquery.allofthelights.js', array(), true );
+        wp_enqueue_script('script-name-light', get_template_directory_uri() . '/js/jquery.allofthelights.js', array(), '262', true);
 }
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -213,6 +215,12 @@ if(is_singular( 'video' ) ){
 }
 
 add_action('wp_enqueue_scripts', 'vm_softcircles_scripts');
+
+
+
+
+
+
 /*
  *  Element hook wp_default_styles
  *  Change all ver style 

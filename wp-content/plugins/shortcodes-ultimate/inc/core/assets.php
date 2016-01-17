@@ -44,6 +44,7 @@ class Su_Assets {
 	public static function register() {
 		// Chart.js
 		wp_register_script( 'chartjs', plugins_url( 'assets/js/chart.js', SU_PLUGIN_FILE ), false, '0.2', true );
+
 		// SimpleSlider
 		wp_register_script( 'simpleslider', plugins_url( 'assets/js/simpleslider.js', SU_PLUGIN_FILE ), array( 'jquery' ), '1.0.0', true );
 		wp_register_style( 'simpleslider', plugins_url( 'assets/css/simpleslider.css', SU_PLUGIN_FILE ), false, '1.0.0', 'all' );
@@ -116,8 +117,10 @@ class Su_Assets {
 		wp_register_script( 'su-galleries-shortcodes', plugins_url( 'assets/js/galleries-shortcodes.js', SU_PLUGIN_FILE ), array( 'jquery', 'swiper' ), SU_PLUGIN_VERSION, true );
 		wp_register_script( 'su-players-shortcodes', plugins_url( 'assets/js/players-shortcodes.js', SU_PLUGIN_FILE ), array( 'jquery', 'jplayer' ), SU_PLUGIN_VERSION, true );
 		wp_register_script( 'su-other-shortcodes', plugins_url( 'assets/js/other-shortcodes.js', SU_PLUGIN_FILE ), array( 'jquery' ), SU_PLUGIN_VERSION, true );
-		wp_localize_script( 'su-other-shortcodes', 'su_other_shortcodes', array( 'no_preview' => __( 'This shortcode doesn\'t work in live preview. Please insert it into editor and preview on the site.', 'shortcodes-ultimate' ) ) );
-		// Hook to deregister assets or add custom
+
+                wp_localize_script( 'su-other-shortcodes', 'su_other_shortcodes', array( 'no_preview' => __( 'This shortcode doesn\'t work in live preview. Please insert it into editor and preview on the site.', 'shortcodes-ultimate' ) ) );
+		
+// Hook to deregister assets or add customdd
 		do_action( 'su/assets/register' );
 	}
 

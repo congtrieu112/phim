@@ -1,6 +1,15 @@
 jQuery.noConflict();
 (function( $ ) {
   $(function() {
+      
+        var height_slide = $("#top-home").height();
+        $(".carousel-inner").css('max-height', height_slide)
+        $(window).resize(function () {
+            var height_slide = $("#top-home").height();
+            $(".carousel-inner").css('max-height', height_slide)
+        });
+      
+      
       $(".load-more").on("click",function(e){
           e.preventDefault();
           $(".process.col-md-12").css("display","block");
@@ -20,7 +29,12 @@ jQuery.noConflict();
           });
          return false;
       });
-      $(".video-light").allofthelights();
+      if(SINGLE_VIDEO){
+          $(".video-light").allofthelights();
+      }
+      
+      
+        
         
      
         

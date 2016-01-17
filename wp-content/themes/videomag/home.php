@@ -74,7 +74,7 @@
                     <div class="sections">
                         <h2 class="heading"><?php _e(' Funny', 'videomagazine'); ?></h2>
                         <div class="clearfix"></div>
-                        <div class="row">
+                        <div class="row" id="top-home">
 
                             <?php
                             $block_home_2 = get_home_top(871,'block_homes','limit_home','block_home');
