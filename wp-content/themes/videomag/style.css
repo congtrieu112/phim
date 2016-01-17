@@ -2708,3 +2708,7 @@ span.su-lightbox.col-md-12 {
 li.likes {
     cursor: pointer;
 }
+.carousel-inner {
+    width: 100%;
+    max-height: 320px !important;
+}
