@@ -1016,7 +1016,6 @@ class Su_Shortcodes {
 			// Create slides
 			foreach ( $slides as $slide ) {
 				// Crop the image
-                            $slide['image'] = (wp_get_attachment_image_src(get_post_thumbnail_id($post_adv->ID), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($post_adv->ID), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
 				$image = su_image_resize( $slide['image'], $atts['width'], $atts['height'] );
 				// Prepare slide title
 				$title = ( $atts['title'] === 'yes' && $slide['title'] ) ? '<span class="su-slider-slide-title">' . stripslashes( $slide['title'] ) . '</span>' : '';
