@@ -46,7 +46,7 @@
                                             <!-- Video Thumbnail Start --> 
                                             <a href="<?php echo get_the_permalink() ?>">
                                              <?php if ($censored = (get_field('censored', $post->ID))) : ?>
-                                                <div class="discount-tag"><?php print _e('che', 'videomagazine') ?></div>
+                                                <div class="discount-tag"></div>
                                             <?php endif; ?>
                                                     <!--image size-->
                                                     <!--326 x 183-->

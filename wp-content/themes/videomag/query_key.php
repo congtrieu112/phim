@@ -74,7 +74,7 @@ Template Name: Custom page
                                                     
                                             <a href="<?php the_permalink(); ?>">
                                                 <?php if ($censored = (get_field('censored', $post->ID))) : ?>
-                                                <div class="discount-tag"><?php print _e('che', 'videomagazine') ?></div>
+                                                <div class="discount-tag"></div>
                                             <?php endif; ?>
                                                 <img src="<?php echo get_bfithumb(652, 366, $image); ?>" class="img-responsive hovereffect" alt="<?php the_title(); ?>" />
                                             </a> 
