@@ -49,7 +49,7 @@ $vm_query = new WP_Query($args);
                             <!-- Video Info End --> 
                         </figure>
                         <!-- Video Title Start -->
-                        <h4><a href="<?php echo get_the_permalink() ?>"><?php echo ShortTitle(get_the_title(),20); ?></a></h4>
+                        <h4><a href="<?php echo get_the_permalink() ?>"><?php echo catchuoi (get_the_title(),20); ?></a></h4>
                         <!-- Video Title End --> 
                     </div>
                     <!-- Video Box End --> 
