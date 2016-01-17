@@ -1094,3 +1094,73 @@ function check_input_field($data) {
 }
 
 
+/*
+ * Emplement hook rewrite_rules_array()
+ */
+
+add_filter('rewrite_rules_array', 'mmp_rewrite_rules');
+function mmp_rewrite_rules($rules)
+{
+    $newRules = array();
+
+    $newRules['contry/(.+)/?$'] = 'index.php?page_id=915&&k=$matches[]'; 
+
+
+
+    return array_merge($newRules, $rules);
+}
+
+
+
+// register two taxonomies to go with the post type
+function wpmudev_register_taxonomy() {
+	// set up labels
+	$labels = array(
+		'name'              => 'List key',
+		'singular_name'     => 'List key',
+		'search_items'      => 'Search List key',
+		'all_items'         => 'All List key',
+		'edit_item'         => 'Edit List key',
+		'update_item'       => 'Update List key',
+		'add_new_item'      => 'Add New List key',
+		'new_item_name'     => 'New List key',
+		'menu_name'         => 'List key'
+	);
+	// register taxonomy
+	register_taxonomy( 'listkey', 'key', array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'query_var' => true,
+		'show_admin_column' => true
+	) );
+}
+add_action( 'init', 'wpmudev_register_taxonomy' );
+
+
+
+// Shorten any text you want
+
+function ShortTitle($text, $chars_limit = 30) {
+
+// Change to the number of characters you want to display
+
+
+
+    $chars_text = strlen($text);
+
+    $text = $text . " ";
+
+    $text = substr($text, 0, $chars_limit);
+
+    $text = substr($text, 0, strrpos($text, ' '));
+
+// If the text has more characters that your limit,
+//add ... so the user knows the text is actually longer
+
+    if ($chars_text > $chars_limit) {
+
+        $text = $text . "...";
+    }
+
+    return $text;
+}

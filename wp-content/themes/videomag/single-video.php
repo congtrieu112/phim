@@ -253,16 +253,32 @@
                           <?php print get_field('time_video',$post->ID); ?>
                         </li>
                       </ul>
-                        
+                        <?php
+                        $actress = get_field('actress',$post->ID);
+                        $country = get_field('country',$post->ID);
+                        $actress_list = $country_list = array();
+                        if($actress){
+                            foreach ($actress as $key => $act) {
+                                $link_actress = '<a href="'.esc_url( add_query_arg( 'Actress', get_post( $act )->post_name, get_permalink( 915 ) ) ).'" >'.get_the_title($act).'</a>';
+                                $actress_list[] = $link_actress;
+                            }
+                        }
+                        if($country){
+                            foreach ($country as $key => $count) {
+                                $link_country = '<a href="'.esc_url( add_query_arg( 'Country', get_post( $count )->post_name, get_permalink( 915 ) ) ).'" >'.get_the_title($count).'</a>';
+                                $country_list[] = $link_country;
+                            }
+                        }
+                        ?>
                         <ul>
                           <li class="col-md-6">
                           <i class="fa fa-globe"></i>
-                          <?php print get_field('country',$post->ID); ?>
+                          <?php print implode(',', $country_list) ; ?>
                         </li>
 
                         <li class="col-md-6">
                           <i class="fa fa-heart-o"></i>
-                          <?php print get_field('actress',$post->ID); ?>
+                          <?php print implode(',', $actress_list) ; ?>
                         </li>
                       </ul>
                         
@@ -299,6 +315,7 @@
 
         <div class="clearfix"></div>
         <?php
+        
         $link_rapidgator = get_field('rapidgator_dowload', $post->ID);
         $link_datafile = get_field('datafile_dowload', $post->ID);
         $link_uploaded = get_field('field_56912de4f0a32', $post->ID);
