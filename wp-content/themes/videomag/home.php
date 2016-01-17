@@ -30,10 +30,10 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
+       <?php for($slide = 0;$slide < count($block_slide) ;$slide++){ ?>
+    <li data-target="#myCarousel" data-slide-to="<?php  print $slide;?>" <?php print ($slide == 0) ? 'class="active"' : '';?>></li>
+       <?php } ?>
+
   </ol>
 
   <!-- Wrapper for slides -->
@@ -44,7 +44,7 @@
           $image = (wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
       ?>
     <div class="item <?php print ($slide == 0) ? "active" : '';?>">
-        <img src="<?php print $image ;?>" alt="Chania">
+        <a href="<?php the_permalink($block_slide[$slide]); ?>"> <img src="<?php print $image ;?>" alt="Chania"></a>
     </div>
       <?php } ?>
     
