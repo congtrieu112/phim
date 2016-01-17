@@ -35,7 +35,10 @@ $vm_query = new WP_Query($args);
                             <!--size medium 420 x 236-->
                             <?php $image = (wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg'; ?>
                             <a href="<?php echo get_the_permalink() ?>">
-                                <img alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" src="<?php echo get_bfithumb(420, 236, $image);  ?>" />
+                                <?php if ($censored = (get_field('censored', $post->ID))) : ?>
+                                    <div class="discount-tag"><?php print _e('che', 'videomagazine') ?></div>
+                                <?php endif; ?>
+                                <img alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" src="<?php echo get_bfithumb(420, 236, $image); ?>" />
                             </a> 
                             <!-- Video Thumbnail End --> 
                             <!-- Video Info Start -->

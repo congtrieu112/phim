@@ -44,7 +44,12 @@
           $image = (wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
       ?>
     <div class="item <?php print ($slide == 0) ? "active" : '';?>">
-        <a href="<?php the_permalink($block_slide[$slide]); ?>"> <img src="<?php print $image ;?>" alt="Chania"></a>
+        <a href="<?php the_permalink($block_slide[$slide]); ?>">
+            <?php if ($censored = (get_field('censored', $block_slide[$slide]))) : ?>
+                <div class="discount-tag"><?php print _e('che', 'videomagazine') ?></div>
+            <?php endif; ?>
+            <img src="<?php print $image ;?>" alt="Chania">
+        </a>
     </div>
       <?php } ?>
     
@@ -86,6 +91,9 @@
                                         <figure>
                                             <!-- Video Thumbnail Start --> 
                                             <a href="<?php print get_permalink($post2->ID); ?>">
+                                                <?php if ($censored = (get_field('censored', $post2->ID))) : ?>
+                                                    <div class="discount-tag"><?php print _e('che', 'videomagazine') ?></div>
+                                                <?php endif; ?>
                                                 <img src="<?php print get_bfithumb(640, 360, $image) ?>" alt="<?php print $post2->post_title ?>" class="img-responsive hovereffect">
                                             </a>
                                             <div class="vidopts">
@@ -168,6 +176,9 @@
                                                         <figure>
                                                             <!-- Video Thumbnail Start --> 
                                                             <a href="<?php print get_permalink(get_the_ID()); ?>">
+                                                                <?php if ($censored = (get_field('censored', $post->ID))) : ?>
+                                                                    <div class="discount-tag"><?php print _e('che', 'videomagazine') ?></div>
+                                                                <?php endif; ?>
                                                                 <!--image size-->
                                                                 <!--207 x 138-->
                                                                 <!--size medium 414 x 276-->
@@ -239,6 +250,9 @@
                                                     <figure>
                                                         <!-- Video Thumbnail Start --> 
                                                         <a href="<?php print get_permalink(get_the_ID()); ?>">
+                                                            <?php if ($censored = (get_field('censored', $post->ID))) : ?>
+                                                                    <div class="discount-tag"><?php print _e('che', 'videomagazine') ?></div>
+                                                                <?php endif; ?>
                                                             <!--image size-->
                                                             <!--207 x 138-->
                                                             <!--size medium 414 x 276-->
