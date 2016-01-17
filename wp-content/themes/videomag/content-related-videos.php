@@ -23,7 +23,7 @@ $vm_query = new WP_Query($args);
         <div class="row">
             <?php while ($vm_query->have_posts()): $vm_query->the_post(); ?>
 
-                <?php $video_duration = get_post_meta(get_the_ID(), '_vm_video_duration', true); ?>
+                                <?php $video_duration = (get_field('time_video', $post->ID)) ? get_field('time_video', $post->ID) : '0 : 00'; ?>
 
                 <div <?php post_class('col-lg-4 col-md-6 col-sm-6 col-xs-12'); ?>> 
                     <!-- Video Box Start -->

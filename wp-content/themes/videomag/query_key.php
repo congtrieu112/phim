@@ -58,8 +58,7 @@ Template Name: Custom page
 
                         <?php if ( $query->have_posts() && $id) : ?>
                             <?php while ($query->have_posts()) : $query->the_post(); ?>
-
-                                <?php $video_duration = get_post_meta(get_the_ID(), '_vm_video_duration', true); ?>
+                                <?php $video_duration = (get_field('time_video', $post->ID)) ? get_field('time_video', $post->ID) : '0 : 00'; ?>
                         
                                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                                     <!-- Video Box Start -->
