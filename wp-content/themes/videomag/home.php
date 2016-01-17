@@ -25,7 +25,8 @@
                 <div class="col-md-6">
                     <h1 class="heading">Sliders</h1>
                     <?php $block_home_1 = implode(',', get_home_top(870,'block_homes','limit_home','block_home')); ?>
-                    <?php //echo do_shortcode('[su_slider source="video: ' . $block_home_1 . '" link="post"]'); ?>              
+                    <?php //echo do_shortcode('[su_slider source="video: ' . $block_home_1 . '" link="post"]'); ?> 
+                    <?php $block_slide = get_home_top(870,'block_homes','limit_home','block_home'); ?>
 <!--slide-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -39,7 +40,6 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
       <?php
-      $block_slide = get_home_top(870,'block_homes','limit_home','block_home');
       for($slide = 0;$slide < count($block_slide) ;$slide++){
           $image = (wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
       ?>
