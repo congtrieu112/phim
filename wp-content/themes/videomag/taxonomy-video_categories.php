@@ -22,7 +22,7 @@
                         <?php if (have_posts()) : ?>
                             <?php while (have_posts()) : the_post(); ?>
 
-                                <?php $video_duration = get_post_meta(get_the_ID(), '_vm_video_duration', true); ?>
+                                <?php $video_duration = (get_field('time_video', $post->ID)) ? get_field('time_video', $post->ID) : '0 : 00'; ?>
                         
                                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                                     <!-- Video Box Start -->
@@ -37,6 +37,9 @@
                                                    <?php $image = (wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg'; ?>
                                                     
                                             <a href="<?php the_permalink(); ?>">
+                                                <?php if ($censored = (get_field('censored', $post->ID))) : ?>
+                                                    <div class="discount-tag"><?php print _e('che', 'videomagazine') ?></div>
+                                                <?php endif; ?>
                                                 <img src="<?php echo get_bfithumb(652, 366, $image); ?>" class="img-responsive hovereffect" alt="<?php the_title(); ?>" />
                                             </a> 
                                             <!-- Video Thumbnail End --> 
