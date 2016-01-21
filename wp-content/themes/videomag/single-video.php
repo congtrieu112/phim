@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 
 <!-- Video Player Section Start -->
@@ -31,7 +30,7 @@
             $file = drive_direct($link_drives);
             $soure = 'sources: [';
             $image .= ', image: "';
-            $image .=  (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0].'"' : get_template_directory_uri() . '/images/images/img21.jpg"';
+            $image .=  (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]) ? get_bfithumb(750, 421, wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]) .'"' : get_template_directory_uri() . '/images/images/img21.jpg"';
             $endsoure = ']';
             $code = "<script type='text/javascript'>";
             $code .= "jwplayer('show-video').setup({";
@@ -100,7 +99,7 @@
                                 </li>
                                 <li class="views">
                                     <h5>Views</h5>
-                                    <h2><?php print ( $count_views = get_post_meta($post->ID,'views',true)) ? $count_views : 0; ; ?></h2>
+                                    <h2><?php print ( $count_views = get_post_meta($post->ID,'views',true)) ? $count_views : rand(7981,12093); ; ?></h2>
                                 </li>
                             </ul>
                         </div>
@@ -242,16 +241,11 @@
                     <div class="blogmetas">
 
                       <ul>
-                          <li class="col-md-6">
-                          <i class="fa fa-align-justify"></i>
+                          <li>
+                         <font color="blue"> <i class="fa fa-align-justify">     CATEGORY:</i></font>
                           <?php vm_get_video_categories(get_the_ID()); ?>
                         </li>
-
-
-                        <li class="col-md-6">
-                          <i class="fa fa fa-play-circle-o"></i>
-                          <?php print get_field('time_video',$post->ID); ?>
-                        </li>
+     
                       </ul>
                         <?php
                         $actress = get_field('actress',$post->ID);
@@ -270,30 +264,35 @@
                             }
                         }
                         ?>
-                        <ul>
+                        <ul></br>
                           <li class="col-md-6">
-                          <i class="fa fa-globe"></i>
+                        <b><font color="red">  <i class="fa fa-globe">     COUNTRY:</i></b></font>
                           <?php print implode(',', $country_list) ; ?>
+                        </li>
+			<li class="col-md-6">
+                        <b><font color="red">  <i class="fa fa fa-play-circle-o">     TIME:</i></b></font>
+                          <?php print get_field('time_video',$post->ID); ?>
                         </li>
 
                         <li class="col-md-6">
-                          <i class="fa fa-heart-o"></i>
+                       <b><font color="red">   <i class="fa fa-heart-o">     ACTRESS:</i></b></font>
                           <?php print implode(',', $actress_list) ; ?>
+                        </li>
+<li class="col-md-6">
+                       <b><font color="red">   <i class="fa fa-video-camera">     QUALITY:</i></b></font>
+                          <?php print get_field('resolution',$post->ID); ?>
                         </li>
                       </ul>
                         
                         
                         <ul>
-                          <li class="col-md-6">
-                          <i class="fa fa-tags"></i>
-                          <?php the_tags(', '); ?>
+                          <li>
+                          <font color="blue"> <i class="fa fa-tags">     TAG:</i></font>
+                          <?php the_tags(''); ?>
                         </li>
 
 
-                        <li class="col-md-6">
-                          <i class="fa fa-video-camera"></i>
-                          <?php print get_field('resolution',$post->ID); ?>
-                        </li>
+                        
                       </ul>
                       <div class="clearfix"></div>
                     </div>

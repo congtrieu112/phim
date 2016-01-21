@@ -13,7 +13,7 @@
 <html <?php language_attributes(); ?>>
     <!--<![endif]-->
     <head>
-        <meta charset="<?php bloginfo('charset'); ?>">
+
         <title><?php wp_title('|', true); ?></title>
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,7 +61,7 @@
                             <!-- Logo Start -->
                             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                                 <div class="logo">
-                                    <a href="<?php echo site_url(); ?>"><img src="<?php echo vm_get_media(); ?>" alt="Video Magazine Logo" /></a>
+                                    <a href="<?php echo site_url(); ?>"><img src="<?php echo vm_get_media(); ?>" alt="KING69.NET" /></a>
                                 </div>
                             </div>
                             <!-- Logo End -->

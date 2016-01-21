@@ -15,15 +15,15 @@
             <!-- Bread Crumb Start -->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">Videos - List</li>
+                    <li><a href="http://king69.net">Home</a></li>
+                    <li class="active">KING69.NET -  Daily Free Porn Videos - Free Watch JAV online.</li>
                 </ol>
             </div>
             <!-- Bread Crumb End -->
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-md-6">
-                    <h1 class="heading">Sliders</h1>
+                    <h1 class="heading">HOT VIDEOS 2016</h1>
                     <?php $block_home_1 = implode(',', get_home_top(870,'block_homes','limit_home','block_home')); ?>
                     <?php //echo do_shortcode('[su_slider source="video: ' . $block_home_1 . '" link="post"]'); ?> 
                     <?php $block_slide = get_home_top(870,'block_homes','limit_home','block_home'); ?>
@@ -311,7 +311,7 @@
             echo ($link_adv_2) ? do_shortcode('[su_frame link=' . $link_adv_2 . ']<img src="' . $img_adv_2 . '" alt="" class="img-responsive" />[/su_frame]') : "";
             ?>
             <div class="sections">
-                <h2 class="heading">Funny</h2>
+                <h2 class="heading">TOP 6 VIDEOS</h2>
                 <div class="clearfix"></div>
                 <div class="row">
                     <?php

@@ -28,7 +28,7 @@
                         $sql = 	"
                                 SELECT *
                                 FROM $wpdb->posts 
-                                WHERE (post_title LIKE %s ) AND (post_type = 'video')";
+                                WHERE (post_title LIKE %s ) AND (post_type = 'video') AND (post_status = 'publish')";
 
                         // Prepare the SQL statement so the string input gets escaped for security.
                         $sql = $wpdb->prepare( $sql, $link, $link );

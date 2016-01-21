@@ -23,10 +23,10 @@
 define('DB_NAME', 'phim');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'phim');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', '123456789@abc');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
