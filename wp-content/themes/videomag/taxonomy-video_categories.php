@@ -19,12 +19,14 @@
                     <div class="clearfix"></div>
                     <div class="row">
                         <?php
+                        $paged = (get_query_var('page')) ? get_query_var('page') : 1;
                                   
                         $array = array(
                                         'post_type' => 'video',
                                         'post_status' => 'publish',
                                         'orderby' => 'date',
                                         'order' => 'DESC',
+                                        'paged' => $paged,
                                         'tax_query' => array(
                                             array(
                                                 'taxonomy' => 'video_categories',
@@ -32,9 +34,10 @@
                                                 'terms' => get_queried_object()->term_id
                                             ),
                                         ),
-                                        'posts_per_page' => 40,
+                                        'posts_per_page' => 2,
                                     );
                                     $query = new WP_Query($array);
+                                    $total = $query->max_num_pages;
                         ?>
 
                         <?php if ($query->have_posts()) : ?>
@@ -88,6 +91,34 @@
                 </div>
                 <!-- Contents Section End -->
                 <div class="clearfix"></div>
+                <ul class="pagination">
+                    
+                    <?php
+
+                        $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); // get current term
+                       $next = $paged+1;
+                        $pre =$paged-1;
+                        $taxonomy = get_queried_object()->taxonomy;
+                        if($total>1){
+
+                       if($paged>1){
+                            echo '<li><a href=" '.get_term_link($term, $taxonomy) .'?page='.$pre.'"><i class="fa fa-angle-left"></i></a></li>';
+                        }
+                         
+                       for($i = 1;$i<=$total;$i++){
+                           if($i==$paged){
+                                echo '<li class="active" ><a  href="javascript:void()">'.$i.'</a></li>' ;
+                            }else{
+                                echo '<li><a  href=" '.get_term_link($term, $taxonomy).'?page='.$i.'">'.$i.'</a></li>';
+                            }
+                        }
+                        if($paged<$total){
+                            echo '<li><a href="'.get_term_link($term, $taxonomy).'?page='.$next.'"><i class="fa fa-angle-right"></i></a></li>';
+                        }
+                    }
+                    ?>
+
+                </ul>
             </div>
         </div>
 
