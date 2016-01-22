@@ -27,16 +27,22 @@ Template Name: Custom page
                         $key = "";
                         $value = "";
                         $id = "";
+                        $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+                        $keys = "";
                         if (isset($_REQUEST['Country'])) {
+                            $keys = 'Country';
                             $value = $_REQUEST['Country'];
                             $key = "country";
                             $id = get_page_by_path($value,OBJECT, 'key')->ID;
+                            
                         }
                         if (isset($_REQUEST['Actress'])) {
+                            $keys = 'Actress';
                             $value = $_REQUEST['Actress'];
                             $key = "actress";
                             $id = get_page_by_path($value,OBJECT, 'key')->ID;
                         }
+                        $link = esc_url( add_query_arg( $keys, $key, get_permalink( 915 ) ) );
                         if ($value ) :
                             
                 
@@ -44,6 +50,7 @@ Template Name: Custom page
                             $args = array(
                                 'meta_key' => $key,
                                 'post_type' => 'video',
+                                'paged' => $paged,
                                 'meta_query' => array(
                                         array(
                                                 'key'     => $key,
@@ -51,8 +58,11 @@ Template Name: Custom page
                                                 'compare' => 'LIKE',
                                         ),
                                 ),
+                                'posts_per_page' => 28,
+
                             );
                             $query = new WP_Query($args);
+                            $total = $query->max_num_pages;
                         ?>
 
 
@@ -106,6 +116,35 @@ Template Name: Custom page
                 </div>
                 <!-- Contents Section End -->
                 <div class="clearfix"></div>
+                <ul class="pagination">
+                    
+                    <?php
+                    
+
+                        $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); // get current term
+                       $next = $paged+1;
+                        $pre =$paged-1;
+                        $taxonomy = get_queried_object()->taxonomy;
+                        if($total>1){
+
+                       if($paged>1){
+                            echo '<li><a href=" '.  $link.'?page='.$pre.'"><i class="fa fa-angle-left"></i></a></li>';
+                        }
+                         
+                       for($i = 1;$i<=$total;$i++){
+                           if($i==$paged){
+                                echo '<li class="active" ><a  href="javascript:void()">'.$i.'</a></li>' ;
+                            }else{
+                                echo '<li><a  href=" '.$link.'?page='.$i.'">'.$i.'</a></li>';
+                            }
+                        }
+                        if($paged<$total){
+                            echo '<li><a href="'.$link.'?page='.$next.'"><i class="fa fa-angle-right"></i></a></li>';
+                        }
+                    }
+                    ?>
+
+                </ul>
             </div>
         </div>
 

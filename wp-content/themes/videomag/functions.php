@@ -1185,10 +1185,12 @@ global $posts_per;
 	$query = new WP_Query();
 	$query->parse_query($query_string);
 	
-	if ($query->is_category) {
+	if ($query->is_category || is_page_template( 'query_key.php' )) {
 		$num = $posts_per_category;
 	
         }
+
+        
 	if (isset($num)) {
 	
 	
