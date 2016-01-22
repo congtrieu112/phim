@@ -1181,7 +1181,7 @@ function ShortTitle($text, $chars_limit = 30) {
 
 function custom_posts_per_page($query_string) {
 global $posts_per;
-        $posts_per_category  = 999;
+        $posts_per_category  = 28;
 	$query = new WP_Query();
 	$query->parse_query($query_string);
 	
