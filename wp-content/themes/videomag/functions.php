@@ -1172,3 +1172,38 @@ function ShortTitle($text, $chars_limit = 30) {
 
     return $text;
 }
+
+
+
+
+
+
+
+function custom_posts_per_page($query_string) {
+global $posts_per;
+        $posts_per_category  = 999;
+	$query = new WP_Query();
+	$query->parse_query($query_string);
+	
+	if ($query->is_category) {
+		$num = $posts_per_category;
+	
+        }
+	if (isset($num)) {
+	
+	
+		if (preg_match("/posts_per_page=/", $query_string)) {
+			
+			$query_string = preg_replace("/posts_per_page=[0-9]*/", "posts_per_page=$num", $query_string);
+		} else {
+			if ($query_string != '') {
+				$query_string .= '&';
+			}
+		$query_string .= "posts_per_page=$num";
+		}
+		
+	}
+	
+return $query_string;
+}
+add_filter('query_string', 'custom_posts_per_page');
