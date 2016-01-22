@@ -18,9 +18,27 @@
                     <h2 class="heading"><?php single_cat_title();  ?></h2>
                     <div class="clearfix"></div>
                     <div class="row">
+                        <?php
+                                  
+                        $array = array(
+                                        'post_type' => 'video',
+                                        'post_status' => 'publish',
+                                        'orderby' => 'date',
+                                        'order' => 'DESC',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'video_categories',
+                                                'field' => 'id',
+                                                'terms' => get_queried_object()->term_id
+                                            ),
+                                        ),
+                                        'posts_per_page' => 40,
+                                    );
+                                    $query = new WP_Query($array);
+                        ?>
 
-                        <?php if (have_posts()) : ?>
-                            <?php while (have_posts()) : the_post(); ?>
+                        <?php if ($query->have_posts()) : ?>
+                            <?php while ($query->have_posts()) : $query->the_post(); ?>
 
                                 <?php $video_duration = (get_field('time_video', $post->ID)) ? get_field('time_video', $post->ID) : '0 : 00'; ?>
                         
