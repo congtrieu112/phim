@@ -69,7 +69,7 @@
                             
 
                         ?>
-                        <?php if ($query->have_posts() && $array) : ?>
+                        <?php if ($array && $query->have_posts() ) : ?>
                             <?php while ($query->have_posts()) : $query->the_post(); ?>
 
                                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6"> 
