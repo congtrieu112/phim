@@ -128,18 +128,18 @@ Template Name: Custom page
                         if($total>1){
 
                        if($paged>1){
-                            echo '<li><a href=" '.  $link.'?page='.$pre.'"><i class="fa fa-angle-left"></i></a></li>';
+                            echo '<li><a href=" '.  $link.'&page='.$pre.'"><i class="fa fa-angle-left"></i></a></li>';
                         }
                          
                        for($i = 1;$i<=$total;$i++){
                            if($i==$paged){
                                 echo '<li class="active" ><a  href="javascript:void()">'.$i.'</a></li>' ;
                             }else{
-                                echo '<li><a  href=" '.$link.'?page='.$i.'">'.$i.'</a></li>';
+                                echo '<li><a  href=" '.$link.'&page='.$i.'">'.$i.'</a></li>';
                             }
                         }
                         if($paged<$total){
-                            echo '<li><a href="'.$link.'?page='.$next.'"><i class="fa fa-angle-right"></i></a></li>';
+                            echo '<li><a href="'.$link.'&page='.$next.'"><i class="fa fa-angle-right"></i></a></li>';
                         }
                     }
                     ?>
