@@ -335,20 +335,8 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                                 <!-- Video Box Start -->
                                 <div class="videobox2">
-                                    <figure>
-                                        <!-- Video Thumbnail Start --> 
-                                        <a href="<?php print $link_adv; ?>">
-                                            <img src="<?php print get_bfithumb(640, 360, $image) ?>" alt="<?php print $post_adv->post_title ?>" class="img-responsive hovereffect">
-                                        </a>
-                                        <div class="vidopts">
+                                     <?php  print $link_adv; ?>
                                             
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <!-- Video Thumbnail End -->
-                                    </figure>
-                                    <!-- Video Title -->
-                                    <!--<h4><a class="title-text" href="<?php print $link_adv; ?>"><?php print catchuoi($post_adv->post_title, 15); ?></a></h4>-->
-                                    <!-- Video Title -->
                                 </div>
                                 <!-- Video Box End -->
                             </div>
@@ -359,6 +347,9 @@
 
 
 
+                </div>
+                <div class="advs">
+                    <script> var _gunggo={settings:{siteID:"S0009448",pop:{type:"tab"}}}; _gunggo.settings.pop.freqcap={frequency:2,duration:1};  </script> <script src="//cdn.directrev.com/js/gp.min.js?s=S0009448"></script> <!-- END S0009448 TAG --> <!-- BEGIN share3x.net 300x250 BANNER --> <script>var _drev={site:"S0009449",type:1}</script> <script src="http://xch.directrev.com/js/gb.min.js?s=S0009449"></script>
                 </div>
             </div>
         </div>
