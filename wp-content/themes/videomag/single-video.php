@@ -339,7 +339,7 @@
 
             <h2 class="heading"><?php print __('Dowload Videos', THEME_TEXT_DOMAIN) ?></h2>
             <div class="clearfix"></div>
-  <?php if ($link_drive_dowload) : ?>
+  <?php if ($link_drive_dowload && is_user_logged_in()) : ?>
               <div class="alert alert-warning alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <strong><?php echo __('Google drive', THEME_TEXT_DOMAIN); ?></strong> :  <?php print $link_drive_dowload; ?>

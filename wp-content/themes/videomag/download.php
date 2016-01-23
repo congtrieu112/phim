@@ -3,7 +3,7 @@
 /*
   Template Name: dowload file
  */
-if (isset($_GET['id'])) {
+if (isset($_GET['id']) && is_user_logged_in()) {
   $episode = 0;
   if (isset($_GET['tap'])) {
     $episode = $_GET['tap'];

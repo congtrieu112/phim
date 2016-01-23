@@ -705,13 +705,13 @@ function drive_direct($url) {
       $f360p = $links;
     }
   }
-  if (isset($f1080p)) {
+  if (isset($f1080p) && is_user_logged_in()) {
     $res .= ($f480p) ? '{file: "' . $f480p . '",type:"mp4",label: "480p"},' : '';
     $res .= ($f360p) ? '{file: "' . $f360p . '",type:"mp4",label: "360p"},' : '';
     $res .= ($f360p) ? '{file: "' . $f720p . '",type:"mp4",label: "720p"},' : '';
     $res .= ($f1080p) ? '{file: "' . $f1080p . '",type:"mp4",label: "1080p"}' : '';
   }
-  elseif (isset($f720p)) {
+  elseif (isset($f720p) && is_user_logged_in()) {
     $res .= ($f480p) ? '{file: "' . $f480p . '",type:"mp4",label: "480p"},' : '';
     $res .= ($f360p) ? '{file: "' . $f360p . '",type:"mp4",label: "360p"},' : '';
     $res .= ($f360p) ? '{file: "' . $f720p . '",type:"mp4",label: "720p"}'  : '';
@@ -986,10 +986,10 @@ function drive_direct_dowload($linkf,$quaty = 360) {
       $f360p = $links;
     }
   }
-  if (isset($f1080p) && $quaty == 1080) {
+  if (isset($f1080p) && $quaty == 1080 ) {
     $res =  $f1080p ;
   }
-  elseif (isset($f720p) && $quaty == 720) {
+  elseif (isset($f720p) && $quaty == 720 ) {
     $res =  $f720p ;
   }
   elseif (isset($f480p) && $quaty == 480) {
