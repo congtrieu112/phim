@@ -65,11 +65,10 @@
                             );
                             $query = new WP_Query($args);
                             $total = $query->max_num_pages;
-                            endif;
                             
 
                         ?>
-                        <?php if ($array && $query->have_posts() ) : ?>
+                        <?php if ( $query->have_posts() ) : ?>
                             <?php while ($query->have_posts()) : $query->the_post(); ?>
 
                                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6"> 
@@ -100,7 +99,8 @@
                                 </div>
 
                             <?php endwhile; ?>
-                        <?php else: ?>
+                        <?php endif;
+                        else: ?>
                             <div class="col-lg-12 col-md-14 col-sm-14 col-xs-16">
                               <p><?php echo __('Sorry! There are no posts.', THEME_TEXT_DOMAIN); ?></p>
                             </div>
