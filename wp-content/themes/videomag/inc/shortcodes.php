@@ -83,7 +83,7 @@ function vm_do_categorynav_bar($atts) {
 			</span><!-- /class="nav_logo" -->
 				<ul id="mega_main_menu_ul" class="mega_main_menu_ul">
 <li id="menu-item-595" class="menu-item menu-item-type-custom menu-item-object-custom active active menu-item-home menu-item-595 widgets_dropdown default_style drop_to_right submenu_default_width columns3">
-	<a href="http://dongdam.info" class="item_link  disable_icon" tabindex="0">
+	<a href="<?php print home_url(); ?>" class="item_link  disable_icon" tabindex="0">
 		<i class=""></i> 
 		<span class="link_content">
 			<span class="link_text">
@@ -94,7 +94,7 @@ function vm_do_categorynav_bar($atts) {
 	<!-- /.mega_dropdown -->
 </li>
 <li id="menu-item-774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-774 widgets_dropdown default_style drop_to_right submenu_default_width columns5">
-	<a href="http://dongdam.info/videos/jav-censored/" class="item_link  disable_icon" tabindex="0">
+	<a href="<?php print home_url(); ?>/videos/jav-censored/" class="item_link  disable_icon" tabindex="0">
 		<i class=""></i> 
 		<span class="link_content">
 			<span class="link_text">
@@ -104,67 +104,67 @@ function vm_do_categorynav_bar($atts) {
 	</a>
 	<ul class="mega_dropdown">
 	<div id="nav_menu-7" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-list-container"><ul id="menu-videos-list" class="menu">
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/abuse-censored/">Abuse</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/asshole-censored/">Asshole</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/bath-censored/">Bath</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/beautifull-girls-censored/">Beautifull Girls</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/big-tits-censored/">Big Tits <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/breast-milk-censored/">Breast Milk</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/bride-young-wife-censored/">Bride-Young Wife</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/classic-censored/">Classic</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/confinement-censored/">Confinement</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/cosplay-censored/">Cosplay</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/couple-censored/">Couple</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/abuse-censored/">Abuse</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/asshole-censored/">Asshole</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/bath-censored/">Bath</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/beautifull-girls-censored/">Beautifull Girls</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/big-tits-censored/">Big Tits <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/breast-milk-censored/">Breast Milk</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/bride-young-wife-censored/">Bride-Young Wife</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/classic-censored/">Classic</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/confinement-censored/">Confinement</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/cosplay-censored/">Cosplay</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/couple-censored/">Couple</a></li>
 </ul></div></div>
 	<div id="nav_menu-8" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/cuckold-censored/">Cuckold</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/abuse-censored/">Dead Drunk</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/dead-drunk-censored/">Doctor</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/drug-censored/">Drug</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/entertainer-censored/">Entertainer</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/father-in-law-censored/">Father-in-law</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/gangbang-censored/">Gangbang <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/gay-censored/">Gay</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/gym-censored/">Gym</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/hardcore-censored/">Hardcore <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/hostess-censored/">Hostess</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/cuckold-censored/">Cuckold</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/abuse-censored/">Dead Drunk</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/dead-drunk-censored/">Doctor</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/drug-censored/">Drug</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/entertainer-censored/">Entertainer</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/father-in-law-censored/">Father-in-law</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/gangbang-censored/">Gangbang <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/gay-censored/">Gay</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/gym-censored/">Gym</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/hardcore-censored/">Hardcore <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/hostess-censored/">Hostess</a></li>
 </ul></div></div>
 	<div id="nav_menu-9" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/incest-censored/">Incest</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/instructor-censored/">Instructor</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/kimono-censored/">Kimono <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/lesbian-censored/">Lesbian</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/married-woman-censored/">Married Woman</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/massage-censored/">Massage</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/molester-censored/">Molester</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/mother-in-law-censored/">Mother-in-law</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/mormal-censored/">Normal</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/murse-censored/">Nurse</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/Office-censored/">Office <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/incest-censored/">Incest</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/instructor-censored/">Instructor</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/kimono-censored/">Kimono <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/lesbian-censored/">Lesbian</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/married-woman-censored/">Married Woman</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/massage-censored/">Massage</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/molester-censored/">Molester</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/mother-in-law-censored/">Mother-in-law</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/mormal-censored/">Normal</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/murse-censored/">Nurse</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/Office-censored/">Office <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
 </ul></div></div>
 <div id="nav_menu-10" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/old-man-censored/">Old Man</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/old-woman-censored/">Old Woman</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/outdoors-censored/">Outdoors</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/peeping-censored/">Peeping</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/Planning-censored/">planning</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/pregnant-woman-censored/">Pregnant Woman</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/rape-censored/">Rape <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/school-girl-censored/">School Girl <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/sex-in-car-censored/">Sex In Car</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/shower-censored/">Shower</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/slave-censored/">Slave</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/old-man-censored/">Old Man</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/old-woman-censored/">Old Woman</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/outdoors-censored/">Outdoors</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/peeping-censored/">Peeping</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/Planning-censored/">planning</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/pregnant-woman-censored/">Pregnant Woman</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/rape-censored/">Rape <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/school-girl-censored/">School Girl <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/sex-in-car-censored/">Sex In Car</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/shower-censored/">Shower</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/slave-censored/">Slave</a></li>
 </ul></div></div>
 <div id="nav_menu-11" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/sm-censored/">SM <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/sport-censored/">Sport</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/stepdad-censored/">StepDad</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/stepmom-censored/">StepMom</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/swimsuit-censored/">Swimsuit</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/teen-girl-censored/">Teen Girl <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/toy-censored/">Toy</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/waitress-censored/">Waitress</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/widow-censored/">Widow</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/sm-censored/">SM <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/sport-censored/">Sport</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/stepdad-censored/">StepDad</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/stepmom-censored/">StepMom</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/swimsuit-censored/">Swimsuit</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/teen-girl-censored/">Teen Girl <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/toy-censored/">Toy</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/waitress-censored/">Waitress</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/widow-censored/">Widow</a></li>
 </ul></div></div>
 <div id="vm_videocategory_grid-1" class="widget widget_vm_videocategory_grid">
         <div class="clearfix"></div>
@@ -172,7 +172,7 @@ function vm_do_categorynav_bar($atts) {
 	</ul><!-- /.mega_dropdown -->
 </li>
 <li id="menu-item-775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-774 widgets_dropdown default_style drop_to_right submenu_default_width columns5">
-	<a href="http://dongdam.info/videos/jav-uncensored/" class="item_link  disable_icon" tabindex="0">
+	<a href="<?php print home_url(); ?>/videos/jav-uncensored/" class="item_link  disable_icon" tabindex="0">
 		<i class=""></i> 
 		<span class="link_content">
 			<span class="link_text">
@@ -182,67 +182,67 @@ function vm_do_categorynav_bar($atts) {
 	</a>
 	<ul class="mega_dropdown">
 	<div id="nav_menu-12" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-list-container"><ul id="menu-videos-list" class="menu">
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/abuse-uncensored/">Abuse</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/asshole-uncensored/">Asshole</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/bath-uncensored/">Bath</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/beautifull-girls-uncensored/">Beautifull Girls</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/big-tits-uncensored/">Big Tits</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/breast-milk-uncensored/">Breast Milk</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/bride-young-wife-uncensored/">Bride-Young Wife</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/classic-uncensored/">Classic</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/confinement-uncensored/">Confinement</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/cosplay-uncensored/">Cosplay <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/couple-uncensored/">Couple</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/abuse-uncensored/">Abuse</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/asshole-uncensored/">Asshole</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/bath-uncensored/">Bath</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/beautifull-girls-uncensored/">Beautifull Girls</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/big-tits-uncensored/">Big Tits</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/breast-milk-uncensored/">Breast Milk</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/bride-young-wife-uncensored/">Bride-Young Wife</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/classic-uncensored/">Classic</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/confinement-uncensored/">Confinement</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/cosplay-uncensored/">Cosplay <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/couple-uncensored/">Couple</a></li>
 </ul></div></div>
 	<div id="nav_menu-8" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/cuckold-uncensored/">Cuckold</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/abuse-uncensored/">Dead Drunk</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/dead-drunk-uncensored/">Doctor</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/drug-uncensored/">Drug</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/entertainer-uncensored/">Entertainer</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/father-in-law-uncensored/">Father-in-law</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/gangbang-uncensored/">Gangbang <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/gay-uncensored/">Gay</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/gym-uncensored/">Gym</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/hardcore-uncensored/">Hardcore <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/hostess-uncensored/">Hostess</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/cuckold-uncensored/">Cuckold</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/abuse-uncensored/">Dead Drunk</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/dead-drunk-uncensored/">Doctor</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/drug-uncensored/">Drug</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/entertainer-uncensored/">Entertainer</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/father-in-law-uncensored/">Father-in-law</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/gangbang-uncensored/">Gangbang <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/gay-uncensored/">Gay</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/gym-uncensored/">Gym</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/hardcore-uncensored/">Hardcore <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/hostess-uncensored/">Hostess</a></li>
 </ul></div></div>
 	<div id="nav_menu-9" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/incest-uncensored/">Incest</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/instructor-uncensored/">Instructor</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/kimono-uncensored/">Kimono</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/lesbian-uncensored/">Lesbian</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/married-woman-uncensored/">Married Woman</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/massage-uncensored/">Massage</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/molester-uncensored/">Molester</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/mother-in-law-uncensored/">Mother-in-law</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/mormal-uncensored/">Normal</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/murse-uncensored/">Nurse <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/Office-uncensored/">Office <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/incest-uncensored/">Incest</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/instructor-uncensored/">Instructor</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/kimono-uncensored/">Kimono</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/lesbian-uncensored/">Lesbian</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/married-woman-uncensored/">Married Woman</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/massage-uncensored/">Massage</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/molester-uncensored/">Molester</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/mother-in-law-uncensored/">Mother-in-law</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/mormal-uncensored/">Normal</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/murse-uncensored/">Nurse <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/Office-uncensored/">Office <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
 </ul></div></div>
 <div id="nav_menu-10" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/old-man-uncensored/">Old Man</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/old-woman-uncensored/">Old Woman</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/outdoors-uncensored/">Outdoors</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/peeping-uncensored/">Peeping</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/Planning-uncensored/">planning</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/pregnant-woman-uncensored/">Pregnant Woman</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/rape-uncensored/">Rape</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/school-girl-uncensored/">School Girl <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/sex-in-car-uncensored/">Sex In Car</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/shower-uncensored/">Shower</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/slave-uncensored/">Slave</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/old-man-uncensored/">Old Man</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/old-woman-uncensored/">Old Woman</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/outdoors-uncensored/">Outdoors</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/peeping-uncensored/">Peeping</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/Planning-uncensored/">planning</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/pregnant-woman-uncensored/">Pregnant Woman</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/rape-uncensored/">Rape</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/school-girl-uncensored/">School Girl <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/sex-in-car-uncensored/">Sex In Car</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/shower-uncensored/">Shower</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/slave-uncensored/">Slave</a></li>
 </ul></div></div>
 <div id="nav_menu-11" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/sm-uncensored/">SM <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/sport-uncensored/">Sport</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/stepdad-uncensored/">StepDad</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/stepmom-uncensored/">StepMom</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/swimsuit-uncensored/">Swimsuit <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/teen-girl-uncensored/">Teen Girl <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/toy-uncensored/">Toy</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/waitress-uncensored/">Waitress</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/widow-uncensored/">Widow</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/sm-uncensored/">SM <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/sport-uncensored/">Sport</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/stepdad-uncensored/">StepDad</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/stepmom-uncensored/">StepMom</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/swimsuit-uncensored/">Swimsuit <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/teen-girl-uncensored/">Teen Girl <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/toy-uncensored/">Toy</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/waitress-uncensored/">Waitress</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/widow-uncensored/">Widow</a></li>
 </ul></div></div>
 <div id="vm_videocategory_grid-1" class="widget widget_vm_videocategory_grid">
         <div class="clearfix"></div>
@@ -250,7 +250,7 @@ function vm_do_categorynav_bar($atts) {
 	</ul><!-- /.mega_dropdown -->
 </li>
 <li id="menu-item-776" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-774 widgets_dropdown default_style drop_to_right submenu_default_width columns5">
-	<a href="http://dongdam.info/videos/us-eu-porn/" class="item_link  disable_icon" tabindex="0">
+	<a href="<?php print home_url(); ?>/videos/us-eu-porn/" class="item_link  disable_icon" tabindex="0">
 		<i class=""></i> 
 		<span class="link_content">
 			<span class="link_text">
@@ -260,67 +260,67 @@ function vm_do_categorynav_bar($atts) {
 	</a>
 	<ul class="mega_dropdown">
 	<div id="nav_menu-16" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-list-container"><ul id="menu-videos-list" class="menu">
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/abuse/">Abuse</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/asshole/">Asshole</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/bath/">Bath</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/beautifull-girls/">Beautifull Girls</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/big-tits/">Big Tits <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/breast-milk/">Breast Milk</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/bride-young-wife/">Bride-Young Wife</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/classic/">Classic</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/confinement/">Confinement</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/cosplay/">Cosplay <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/couple/">Couple</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/abuse/">Abuse</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/asshole/">Asshole</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/bath/">Bath</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/beautifull-girls/">Beautifull Girls</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/big-tits/">Big Tits <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/breast-milk/">Breast Milk</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/bride-young-wife/">Bride-Young Wife</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/classic/">Classic</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/confinement/">Confinement</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/cosplay/">Cosplay <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/couple/">Couple</a></li>
 </ul></div></div>
 	<div id="nav_menu-8" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/cuckold/">Cuckold</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/abuse/">Dead Drunk</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/dead-drunk/">Doctor</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/drug/">Drug</a></li>
-<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="http://dongdam.info/videos/entertainer/">Entertainer</a></li>
-<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="http://dongdam.info/videos/father-in-law/">Father-in-law</a></li>
-<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="http://dongdam.info/videos/gangbang/">Gangbang <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/gay/">Gay</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/gym/">Gym</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/hardcore/">Hardcore <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/hostess/">Hostess</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/cuckold/">Cuckold</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/abuse/">Dead Drunk</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/dead-drunk/">Doctor</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/drug/">Drug</a></li>
+<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877"><a href="<?php print home_url(); ?>/videos/entertainer/">Entertainer</a></li>
+<li id="menu-item-791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-791"><a href="<?php print home_url(); ?>/videos/father-in-law/">Father-in-law</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a href="<?php print home_url(); ?>/videos/gangbang/">Gangbang <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/gay/">Gay</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/gym/">Gym</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/hardcore/">Hardcore <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/hostess/">Hostess</a></li>
 </ul></div></div>
 	<div id="nav_menu-9" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/incest/">Incest</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/instructor/">Instructor</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/kimono/">Kimono</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/lesbian/">Lesbian</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/married-woman/">Married Woman</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/massage/">Massage</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/molester/">Molester</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/mother-in-law/">Mother-in-law</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/mormal/">Normal</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/murse/">Nurse</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/Office/">office</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/incest/">Incest</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/instructor/">Instructor</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/kimono/">Kimono</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/lesbian/">Lesbian</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/married-woman/">Married Woman</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/massage/">Massage</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/molester/">Molester</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/mother-in-law/">Mother-in-law</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/mormal/">Normal</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/murse/">Nurse</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/Office/">office</a></li>
 </ul></div></div>
 <div id="nav_menu-10" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/old-man/">Old Man</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/old-woman/">Old Woman</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/outdoors/">Outdoors</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/peeping/">Peeping</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/Planning/">planning</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/pregnant-woman/">Pregnant Woman</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/rape/">Rape <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/school-girl/">School Girl</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/sex-in-car/">Sex In Car</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/shower/">Shower</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/slave/">Slave</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/old-man/">Old Man</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/old-woman/">Old Woman</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/outdoors/">Outdoors</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/peeping/">Peeping</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/Planning/">planning</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/pregnant-woman/">Pregnant Woman</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/rape/">Rape <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/school-girl/">School Girl</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/sex-in-car/">Sex In Car</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/shower/">Shower</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/slave/">Slave</a></li>
 </ul></div></div>
 <div id="nav_menu-11" class="widget widget_nav_menu"><div class="widgettitle">Categories</div><div class="menu-videos-carousel-container"><ul id="menu-videos-carousel" class="menu">
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/sm/">SM</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/sport/">Sport</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/stepdad/">StepDad</a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/stepmom/">StepMom</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/swimsuit/">Swimsuit</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/teen-girl/">Teen Girl <img src="http://dongdam.info/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
-<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://dongdam.info/videos/toy/">Toy</a></li>
-<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="http://dongdam.info/videos/waitress/">Waitress</a></li>
-<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="http://dongdam.info/videos/widow/">Widow</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/sm/">SM</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/sport/">Sport</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/stepdad/">StepDad</a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/stepmom/">StepMom</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/swimsuit/">Swimsuit</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/teen-girl/">Teen Girl <img src="<?php print home_url(); ?>/wp-content/uploads/2016/01/icon-hot-big.gif" /></a></li>
+<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="<?php print home_url(); ?>/videos/toy/">Toy</a></li>
+<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="<?php print home_url(); ?>/videos/waitress/">Waitress</a></li>
+<li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="<?php print home_url(); ?>/videos/widow/">Widow</a></li>
 </ul></div></div>
 <div id="vm_videocategory_grid-1" class="widget widget_vm_videocategory_grid">
         <div class="clearfix"></div>
@@ -328,7 +328,7 @@ function vm_do_categorynav_bar($atts) {
 	</ul><!-- /.mega_dropdown -->
 </li>
 <li id="menu-item-773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-773 widgets_dropdown default_style drop_to_right submenu_default_width columns3">
-	<a href="http://dongdam.info/videos/amature-videos/" class="item_link  disable_icon" tabindex="0">
+	<a href="<?php print home_url(); ?>/videos/amature-videos/" class="item_link  disable_icon" tabindex="0">
 		<i class=""></i> 
 		<span class="link_content">
 			<span class="link_text">
@@ -337,37 +337,37 @@ function vm_do_categorynav_bar($atts) {
 		</span>
 	</a>
 	<ul class="mega_dropdown"><div id="nav_menu-10" class="widget widget_nav_menu"><div class="widgettitle">CHINA</div><div class="menu-blog-list-container"><ul id="menu-blog-list" class="menu">
-<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="http://dongdam.info/videos/teen-girl-china/">Teen Girl</a></li>
-<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="http://dongdam.info/videos/webcam-showcam-china/">WebCam-ShowCam</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/handmade-china/">HandMade</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/other-china/">Other</a></li>
+<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="<?php print home_url(); ?>/videos/teen-girl-china/">Teen Girl</a></li>
+<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="<?php print home_url(); ?>/videos/webcam-showcam-china/">WebCam-ShowCam</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/handmade-china/">HandMade</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/other-china/">Other</a></li>
 </ul></div></div><div id="nav_menu-11" class="widget widget_nav_menu"><div class="widgettitle">JAPAN</div><div class="menu-blog-carousel-container"><ul id="menu-blog-carousel" class="menu">
-<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="http://dongdam.info/videos/teen-girl-japan/">Teen Girl</a></li>
-<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="http://dongdam.info/videos/webcam-showcam-japan/">WebCam-ShowCam</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/handmade-japan/">HandMade</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/other-japan/">Other</a></li>
+<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="<?php print home_url(); ?>/videos/teen-girl-japan/">Teen Girl</a></li>
+<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="<?php print home_url(); ?>/videos/webcam-showcam-japan/">WebCam-ShowCam</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/handmade-japan/">HandMade</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/other-japan/">Other</a></li>
 </ul></div></div><div id="nav_menu-12" class="widget widget_nav_menu"><div class="widgettitle">THAILAND</div><div class="menu-blog-detail-container"><ul id="menu-blog-detail" class="menu">
-<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="http://dongdam.info/videos/teen-girl-thailand/">Teen Girl</a></li>
-<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="http://dongdam.info/videos/webcam-showcam-thailand/">WebCam-ShowCam</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/handmade-thailand/">HandMade</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/other-thailand/">Other</a></li>
+<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="<?php print home_url(); ?>/videos/teen-girl-thailand/">Teen Girl</a></li>
+<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="<?php print home_url(); ?>/videos/webcam-showcam-thailand/">WebCam-ShowCam</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/handmade-thailand/">HandMade</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/other-thailand/">Other</a></li>
 </ul></div></div>
 <div id="nav_menu-12" class="widget widget_nav_menu"><div class="widgettitle">VIETNAM</div><div class="menu-blog-detail-container"><ul id="menu-blog-detail" class="menu">
-<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="http://dongdam.info/videos/teen-girl-vietnam/">Teen Girl</a></li>
-<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="http://dongdam.info/videos/webcam-showcam-vietnam/">WebCam-ShowCam</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/handmade-vietnam/">HandMade</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/other-vietnam/">Other</a></li>
+<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="<?php print home_url(); ?>/videos/teen-girl-vietnam/">Teen Girl</a></li>
+<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="<?php print home_url(); ?>/videos/webcam-showcam-vietnam/">WebCam-ShowCam</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/handmade-vietnam/">HandMade</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/other-vietnam/">Other</a></li>
 </ul></div></div>
 <div id="nav_menu-12" class="widget widget_nav_menu"><div class="widgettitle">KOREA</div><div class="menu-blog-detail-container"><ul id="menu-blog-detail" class="menu">
-<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="http://dongdam.info/videos/teen-girl-korea/">Teen Girl</a></li>
-<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="http://dongdam.info/videos/webcam-showcam-korea/">WebCam-ShowCam</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/handmade-korea/">HandMade</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/other-korea/">Other</a></li>
+<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="<?php print home_url(); ?>/videos/teen-girl-korea/">Teen Girl</a></li>
+<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="<?php print home_url(); ?>/videos/webcam-showcam-korea/">WebCam-ShowCam</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/handmade-korea/">HandMade</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/other-korea/">Other</a></li>
 </ul></div></div>
 <div id="nav_menu-12" class="widget widget_nav_menu"><div class="widgettitle">OTHER</div><div class="menu-blog-detail-container"><ul id="menu-blog-detail" class="menu">
-<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="http://dongdam.info/videos/teen-girl-other/">Teen Girl</a></li>
-<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="http://dongdam.info/videos/webcam-showcam-other/">WebCam-ShowCam</a></li>
-<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://dongdam.info/videos/handmade-other/">HandMade</a></li>
+<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="<?php print home_url(); ?>/videos/teen-girl-other/">Teen Girl</a></li>
+<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="<?php print home_url(); ?>/videos/webcam-showcam-other/">WebCam-ShowCam</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="<?php print home_url(); ?>/videos/handmade-other/">HandMade</a></li>
 </ul></div></div><div id="vm_postcategory_grid-1" class="widget widget_vm_postcategory_grid">        <!-- Contents Section Started -->
         <!-- Contents Section End -->
         <div class="clearfix"></div>
@@ -376,7 +376,7 @@ function vm_do_categorynav_bar($atts) {
 </li>
 
 <li id="menu-item-886" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-886 multicolumn_dropdown default_style drop_to_right submenu_default_width columns5">
-	<a href="http://dongdam.info/videos/studio/" class="item_link  disable_icon" tabindex="0">
+	<a href="<?php print home_url(); ?>/videos/studio/" class="item_link  disable_icon" tabindex="0">
 		<i class=""></i> 
 		<span class="link_content">
 			<span class="link_text">
@@ -386,7 +386,7 @@ function vm_do_categorynav_bar($atts) {
 	</a>
 	<ul class="mega_dropdown">
 	<li id="menu-item-887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-887 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/attackers/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/attackers/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -396,7 +396,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-888 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/bi/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/bi/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -406,7 +406,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-889" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-889 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/buoy-and-earl-produce/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/buoy-and-earl-produce/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -416,7 +416,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-890 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/crystal-eizou/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/crystal-eizou/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -426,7 +426,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-891 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/e-body/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/e-body/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -436,7 +436,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-892 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/ei-ten/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/ei-ten/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -446,7 +446,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-893 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/fetish-box-mousou-zoku/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/fetish-box-mousou-zoku/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -456,7 +456,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-894 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/hot-entertainment/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/hot-entertainment/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -466,7 +466,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-895 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/idea-pocket/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/idea-pocket/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -476,7 +476,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-896 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/kira-kira/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/kira-kira/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -486,7 +486,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-897 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/ms-video-group/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/ms-video-group/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -496,7 +496,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-898 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/maza/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/maza/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -506,7 +506,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-899 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/miru/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/miru/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -516,7 +516,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-900 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/moodyz/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/moodyz/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -526,7 +526,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/non/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/non/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -536,7 +536,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/opera/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/opera/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -546,7 +546,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-903 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/oppai/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/oppai/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -556,7 +556,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-904 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/prestige/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/prestige/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -566,7 +566,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-905 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/radix/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/radix/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -576,7 +576,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-906 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/ran-maru/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/ran-maru/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -586,7 +586,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/redcat/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/redcat/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -596,7 +596,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/rookie/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/rookie/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -606,7 +606,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/s-cute/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/s-cute/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -616,7 +616,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/sadistic-village/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/sadistic-village/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -626,7 +626,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/siro/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/siro/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -636,7 +636,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/sod-create/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/sod-create/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -646,7 +646,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/tma/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/tma/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -656,7 +656,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/venus/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/venus/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -666,7 +666,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/waap-entertainment/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/waap-entertainment/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -678,7 +678,7 @@ function vm_do_categorynav_bar($atts) {
 	</ul><!-- /.mega_dropdown -->
 </li>
 <li id="menu-item-886" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-886 multicolumn_dropdown default_style drop_to_right submenu_default_width columns5">
-	<a href="http://dongdam.info/videos/audio/" class="item_link  disable_icon" tabindex="0">
+	<a href="<?php print home_url(); ?>/videos/audio/" class="item_link  disable_icon" tabindex="0">
 		<i class=""></i> 
 		<span class="link_content">
 			<span class="link_text">
@@ -688,7 +688,7 @@ function vm_do_categorynav_bar($atts) {
 	</a>
 	<ul class="mega_dropdown">
 	<li id="menu-item-887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-887 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/1000giri/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/1000giri/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -698,7 +698,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-888 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/10musume/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/10musume/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -708,7 +708,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-889" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-889 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/1pondo/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/1pondo/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -718,7 +718,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-890 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/av9898/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/av9898/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -728,7 +728,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-891 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/c0930/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/c0930/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -738,7 +738,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-892 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/caribbeancom/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/caribbeancom/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -748,7 +748,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-893 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/g-queen/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/g-queen/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -758,7 +758,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-894 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/gachinco/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/gachinco/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -768,7 +768,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-895 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/h0930/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/h0930/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -778,7 +778,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-896 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/h4610/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/h4610/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -788,7 +788,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-897 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/heyzo/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/heyzo/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -798,7 +798,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-898 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/mesubuta/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/mesubuta/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -808,7 +808,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-899 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/muramura/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/muramura/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -818,7 +818,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-900 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/pacopacomama/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/pacopacomama/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -828,7 +828,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/red-hot-collection/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/red-hot-collection/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -838,7 +838,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/sky-high-entertainment/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/sky-high-entertainment/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -848,7 +848,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-903 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/tokyo-hot/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/tokyo-hot/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -858,7 +858,7 @@ function vm_do_categorynav_bar($atts) {
 		</a>
 	</li>
 	<li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-904 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:20%;">
-		<a href="http://dongdam.info/videos/javhd-com/" class="item_link  disable_icon" tabindex="0">
+		<a href="<?php print home_url(); ?>/videos/javhd-com/" class="item_link  disable_icon" tabindex="0">
 			<i class=""></i> 
 			<span class="link_content">
 				<span class="link_text">
@@ -870,7 +870,7 @@ function vm_do_categorynav_bar($atts) {
 	</ul><!-- /.mega_dropdown -->
 </li>
 <li id="menu-item-772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-772 widgets_dropdown default_style drop_to_right submenu_default_width columns2">
-	<a href="http://dongdam.info/gallery" class="item_link  disable_icon" tabindex="0">
+	<a href="<?php print home_url(); ?>/gallery" class="item_link  disable_icon" tabindex="0">
 		<i class=""></i> 
 		<span class="link_content">
 			<span class="link_text">
@@ -880,7 +880,7 @@ function vm_do_categorynav_bar($atts) {
 	</a>
 </li>
 <li id="menu-item-775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-775 widgets_dropdown default_style drop_to_right submenu_default_width columns1">
-	<a href="http://dongdam.info/contact-us/" class="item_link  disable_icon" tabindex="0">
+	<a href="<?php print home_url(); ?>/contact-us/" class="item_link  disable_icon" tabindex="0">
 		<i class=""></i> 
 		<span class="link_content">
 			<span class="link_text">
@@ -889,6 +889,39 @@ function vm_do_categorynav_bar($atts) {
 		</span>
 	</a>
 </li>
+<?php if(!is_user_logged_in()) : ?>
+<li id="menu-item-775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-775 widgets_dropdown default_style drop_to_right submenu_default_width columns1">
+	<a href="<?php print home_url(); ?>/login/" class="item_link  disable_icon" tabindex="0">
+		<i class=""></i> 
+		<span class="link_content">
+			<span class="link_text">
+			LOGIN
+			</span>
+		</span>
+	</a>
+</li>
+<li id="menu-item-775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-775 widgets_dropdown default_style drop_to_right submenu_default_width columns1">
+	<a href="<?php print home_url(); ?>/register/" class="item_link  disable_icon" tabindex="0">
+		<i class=""></i> 
+		<span class="link_content">
+			<span class="link_text">
+			REGISTER
+			</span>
+		</span>
+	</a>
+</li>
+
+<li id="menu-item-775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-775 widgets_dropdown default_style drop_to_right submenu_default_width columns1">
+	<a href="<?php print home_url(); ?>/forgot-password/" class="item_link  disable_icon" tabindex="0">
+		<i class=""></i> 
+		<span class="link_content">
+			<span class="link_text">
+			FORGOT PASSWORD
+			</span>
+		</span>
+	</a>
+</li>
+<?php endif;    ?>
 </ul>
 		</div><!-- /class="menu_inner" -->
 	</div><!-- /class="menu_holder" -->
