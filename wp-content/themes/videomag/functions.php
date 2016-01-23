@@ -718,7 +718,7 @@ function drive_direct($url) {
   }
   elseif (isset($f480p)) {
     $res .= ($f480p) ? '{file: "' . $f480p . '",type:"mp4",label: "480p"},' : '';
-    $res .= ($f360p) ? '{file: "' . $f360p . '",type:"mp4",label: "360p"}'  : '';
+//    $res .= ($f360p) ? '{file: "' . $f360p . '",type:"mp4",label: "360p"}'  : '';
   }
   else {
     $res .= ($f360p) ? '{file: "' . $f360p . '",type:"mp4",label: "360p"}'  : '';
