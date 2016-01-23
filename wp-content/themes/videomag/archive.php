@@ -48,6 +48,7 @@
                         
                         $array = ($results) ? array_values($results) : "";
                         $array = ($array) ? array_values($array) : "";
+                        if($array) :
                         for($i=0;$i<count($array);$i++){
                             $arrays[] = $array[$i]['object_id'];
                         }
@@ -64,6 +65,7 @@
                             );
                             $query = new WP_Query($args);
                             $total = $query->max_num_pages;
+                            endif;
                             
 
                         ?>
