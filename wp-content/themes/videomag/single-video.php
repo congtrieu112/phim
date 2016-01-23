@@ -165,6 +165,12 @@
                     <hr>
                     <a class="lbg-style1 like-326 jlk btn btn-primary backcolor" href="javascript:void(0)" data-task="like" data-post_id="<?php print $post->ID; ?>" data-nonce="<?php print wp_create_nonce("wti_like_post_vote_nonce"); ;?>" rel="nofollow" >Like This Video</a>
                 </div>
+      <?php if(!is_user_logged_in()) :  ?>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 likeit">
+                    <hr>
+                    <a class="btn btn-primary backcolor" href="<?php print home_url()."/login" ?>" data-task="like" >Login view full HD </a>
+                </div>
+      <?php endif; ?>
       <?php /* <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 likeit">
         <hr />
         <a class="btn btn-primary backcolor" href="#">Like This Video</a>
@@ -339,6 +345,12 @@
 
             <h2 class="heading"><?php print __('Dowload Videos', THEME_TEXT_DOMAIN) ?></h2>
             <div class="clearfix"></div>
+            <?php if(!is_user_logged_in()) :  ?>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 likeit">
+                    <hr>
+                    <a class="btn btn-primary backcolor" href="<?php print home_url()."/login" ?>" data-task="like" >Login download speed </a>
+                </div>
+      <?php endif; ?>
   <?php if ($link_drive_dowload && is_user_logged_in()) : ?>
               <div class="alert alert-warning alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
