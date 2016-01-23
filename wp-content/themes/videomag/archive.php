@@ -43,7 +43,6 @@
                     <div class="clearfix"></div>
                     <div class="row">
                         <?php
-                        $query = new WP_Query( array( 'tag' => 'muramura' ) );
                         global $wpdb;
                         $results = $wpdb->get_results( "SELECT DISTINCT $wpdb->term_relationships.object_id  FROM $wpdb->terms,$wpdb->term_relationships WHERE $wpdb->terms.term_id = $wpdb->term_relationships.term_taxonomy_id AND $wpdb->terms.name = '".get_query_var('tag')."' ", ARRAY_A );
                         $array = array_values($results);
