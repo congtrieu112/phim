@@ -19,6 +19,9 @@
                     <div class="clearfix"></div>
                     <div class="row">
                         <?php
+                        $character = vm_get_option('opt-limit-category');
+                        $paging = current(explode("|", $character));
+                        $limt_character = end(explode("|", $character));
                         $paged = (get_query_var('page')) ? get_query_var('page') : 1;
                                   
                         $array = array(
@@ -34,7 +37,7 @@
                                                 'terms' => get_queried_object()->term_id
                                             ),
                                         ),
-                                        'posts_per_page' => 28,
+                                        'posts_per_page' => $paging,
                                     );
                                     $query = new WP_Query($array);
                                     $total = $query->max_num_pages;
@@ -75,7 +78,7 @@
                                             <!-- Video Info End --> 
                                         </figure>
                                         <!-- Video Title Start -->
-                                        <h4><a href="<?php the_permalink(); ?>"><?php print catchuoi(get_the_title(), 30); ?></a></h4>
+                                        <h4><a href="<?php the_permalink(); ?>"><?php print catchuoi(get_the_title(), $limt_character); ?></a></h4>
                                         <!-- Video Title End --> 
                                     </div>
                                     <!-- Video Box End --> 

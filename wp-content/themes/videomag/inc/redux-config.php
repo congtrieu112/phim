@@ -585,6 +585,49 @@ if (!class_exists('Vm_Redux_Framework_Config')) {
                     ),
                 ),
             );
+            $this->sections[] = array(
+                'title' => __('Paging & character', THEME_TEXT_DOMAIN),
+                'desc' => __('Custom number paging', THEME_TEXT_DOMAIN),
+                'icon' => 'el-icon-refresh',
+                'fields' => array(
+                    array(
+                        'id' => 'opt-limit-home',
+                        'type' => 'text',
+                        'title' => __('Home 28|40', THEME_TEXT_DOMAIN),
+                        'default' => '28|40',
+                    ),
+                    array(
+                        'id' => 'opt-limit-custom-query',
+                        'type' => 'text',
+                        'title' => __('Contry & Actress 28|40', THEME_TEXT_DOMAIN),
+                        'default' => '28|40',
+                    ),
+                    array(
+                        'id' => 'opt-limit-search',
+                        'type' => 'text',
+                        'title' => __('Search 28|40', THEME_TEXT_DOMAIN),
+                        'default' => '28|40',
+                    ),
+                    array(
+                        'id' => 'opt-limit-category',
+                        'type' => 'text',
+                        'title' => __('Category 28|40', THEME_TEXT_DOMAIN),
+                        'default' => '28|40',
+                    ),
+                    array(
+                        'id' => 'opt-limit-tag',
+                        'type' => 'text',
+                        'title' => __('Tag 28|40', THEME_TEXT_DOMAIN),
+                        'default' => '28|40',
+                    ),
+                    array(
+                        'id' => 'opt-limit-related-video',
+                        'type' => 'text',
+                        'title' => __('Related video 28|40', THEME_TEXT_DOMAIN),
+                        'default' => '28|40',
+                    ),
+                ),
+            );
         }
 
         public function setHelpTabs() {

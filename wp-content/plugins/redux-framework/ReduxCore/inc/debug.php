@@ -39,7 +39,7 @@
             public function render() {
                 echo '<div id="dev_mode_default_section_group' . '" class="redux-group-tab">';
                 echo '<h3>' . __( 'Options Object', 'redux-framework' ) . '</h3>';
-                echo '<div class="redux-section-desc">';
+                echo '<div class="redux-section-desc ">';
                 echo '<div id="redux-object-browser"></div>';
                 echo '</div>';
 

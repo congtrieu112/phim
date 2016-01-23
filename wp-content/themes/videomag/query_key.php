@@ -27,6 +27,9 @@ Template Name: Custom page
                         $key = "";
                         $value = "";
                         $id = "";
+                        $character = vm_get_option('opt-limit-custom-query');
+                        $paging = current(explode("|", $character));
+                        $limt_character = end(explode("|", $character));
 
                         $paged = (get_query_var('page')) ? get_query_var('page') : 1;
                         $keys = "";
@@ -60,7 +63,7 @@ Template Name: Custom page
                                                 'compare' => 'LIKE',
                                         ),
                                 ),
-                                'posts_per_page' => 28,
+                                'posts_per_page' => $paging,
 
                             );
                             $query = new WP_Query($args);
@@ -102,7 +105,7 @@ Template Name: Custom page
                                             <!-- Video Info End --> 
                                         </figure>
                                         <!-- Video Title Start -->
-                                        <h4><a href="<?php the_permalink(); ?>"><?php print catchuoi(get_the_title(), 30); ?></a></h4>
+                                        <h4><a href="<?php the_permalink(); ?>"><?php print catchuoi(get_the_title(), $limt_character); ?></a></h4>
                                         <!-- Video Title End --> 
                                     </div>
                                     <!-- Video Box End --> 
@@ -123,10 +126,8 @@ Template Name: Custom page
                     <?php
                     
 
-                        $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); // get current term
                        $next = $paged+1;
                         $pre =$paged-1;
-                        $taxonomy = get_queried_object()->taxonomy;
                         if($total>1){
 
                        if($paged>1){

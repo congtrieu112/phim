@@ -34,6 +34,9 @@
                         $sql = $wpdb->prepare( $sql, $link, $link );
                         
                         $query = $wpdb->get_results( $sql ) ;
+                        $character = vm_get_option('opt-limit-search');
+                        $paging = current(explode("|", $character));
+                        $limt_character = end(explode("|", $character));
                         ?>
                         <?php if ($query) : ?>
                        <?php while (list ($key, $val) = each ($query) ) :
@@ -57,7 +60,7 @@
                                             </a> 
                                         </figure>
                                         <div class="text">
-                                            <h4><a href="<?php the_permalink() ?>"><?php $title = catchuoi( get_the_title() , 40);  print str_ireplace(get_query_var('s'), '<font color="red">'.get_query_var('s').'</font>',$title) ;?></a></h4>
+                                            <h4><a href="<?php the_permalink() ?>"><?php $title = catchuoi( get_the_title() , $limt_character);  print str_ireplace(get_query_var('s'), '<font color="red">'.get_query_var('s').'</font>',$title) ;?></a></h4>
                                             <ul>
                                                 <li><i class="fa fa-calendar"></i><?php the_time('d-m-Y'); ?></li>
                                                 <li>

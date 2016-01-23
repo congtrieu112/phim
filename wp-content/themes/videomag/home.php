@@ -24,51 +24,51 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-md-6">
                     <h1 class="heading">HOT VIDEOS 2016</h1>
-                    <?php $block_home_1 = implode(',', get_home_top(870,'block_homes','limit_home','block_home')); ?>
+                    <?php $block_home_1 = implode(',', get_home_top(870, 'block_homes', 'limit_home', 'block_home')); ?>
                     <?php //echo do_shortcode('[su_slider source="video: ' . $block_home_1 . '" link="post"]'); ?> 
-                    <?php $block_slide = get_home_top(870,'block_homes','limit_home','block_home'); ?>
-<!--slide-->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-       <?php for($slide = 0;$slide < count($block_slide) ;$slide++){ ?>
-    <li data-target="#myCarousel" data-slide-to="<?php  print $slide;?>" <?php print ($slide == 0) ? 'class="active"' : '';?>></li>
-       <?php } ?>
+                    <?php $block_slide = get_home_top(870, 'block_homes', 'limit_home', 'block_home'); ?>
+                    <!--slide-->
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <?php for ($slide = 0; $slide < count($block_slide); $slide++) { ?>
+                                <li data-target="#myCarousel" data-slide-to="<?php print $slide; ?>" <?php print ($slide == 0) ? 'class="active"' : ''; ?>></li>
+                            <?php } ?>
 
-  </ol>
+                        </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-      <?php
-      for($slide = 0;$slide < count($block_slide) ;$slide++){
-          $image = (wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
-      ?>
-    <div class="item <?php print ($slide == 0) ? "active" : '';?>">
-        <a href="<?php the_permalink($block_slide[$slide]); ?>">
-            <?php if ($censored = (get_field('censored', $block_slide[$slide]))) : ?>
-                <div class="discount-tag"></div>
-            <?php endif; ?>
-                <!--660x326-->
-                <!--medium size 1320 x 652 -->
-                <img src="<?php print get_bfithumb(1320, 652, $image)  ;?>" alt="Chania">
-        </a>
-    </div>
-      <?php } ?>
-    
-  </div>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <?php
+                            for ($slide = 0; $slide < count($block_slide); $slide++) {
+                                $image = (wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($block_slide[$slide]), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
+                                ?>
+                                <div class="item <?php print ($slide == 0) ? "active" : ''; ?>">
+                                    <a href="<?php the_permalink($block_slide[$slide]); ?>">
+                                        <?php if ($censored = (get_field('censored', $block_slide[$slide]))) : ?>
+                                            <div class="discount-tag"></div>
+                                        <?php endif; ?>
+                                        <!--660x326-->
+                                        <!--medium size 1320 x 652 -->
+                                        <img src="<?php print get_bfithumb(1320, 652, $image); ?>" alt="Chania">
+                                    </a>
+                                </div>
+                            <?php } ?>
 
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+                        </div>
 
-<!--end slide-->
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    <!--end slide-->
 
                 </div>
                 <div class="col-md-6">
@@ -79,7 +79,7 @@
                         <div class="row" id="top-home">
 
                             <?php
-                            $block_home_2 = get_home_top(871,'block_homes','limit_home','block_home');
+                            $block_home_2 = get_home_top(871, 'block_homes', 'limit_home', 'block_home');
                             for ($block2 = 0; $block2 < count($block_home_2); $block2++) :
                                 $post2 = get_post($block_home_2["$block2"]);
                                 $image = (wp_get_attachment_image_src(get_post_thumbnail_id($post2->ID), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($post2->ID), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
@@ -130,12 +130,11 @@
 
                 <div>
                     <?php
-
-                    $cats = get_home_top(908,'home_cat','cat_limit','cat_homes');
+                    $cats = get_home_top(908, 'home_cat', 'cat_limit', 'cat_homes');
                     $cats = array_shift($cats);
 
                     for ($cat = 0; $cat < count($cats); $cat++):
-                        $cat_info = get_term($cats[$cat],'video_categories');
+                        $cat_info = get_term($cats[$cat], 'video_categories');
                         ?>
                         <?php if ($cat == 0) : ?>
                             <!-- Nav tabs -->
@@ -152,7 +151,13 @@
                         <?php endif; ?>
                     <?php endfor; ?>
                     <?php for ($cat = 0; $cat < count($cats); $cat++): ?>
-                            <?php $cat_info = get_term($cats[$cat],'video_categories'); ?>
+                        <?php 
+                        $cat_info = get_term($cats[$cat], 'video_categories');
+                        $character = vm_get_option('opt-limit-home');
+                        $paging = current(explode("|", $character));
+                        $limt_character = end(explode("|", $character));
+                        
+                        ?>
                         <?php if ($cat == 0) : ?>
                             <!-- Tab panes -->
                             <div class="tab-content">
@@ -161,7 +166,7 @@
                                         <?php
                                         $arr = array(
                                             'post_type' => 'video',
-                                            'posts_per_page' => 40,
+                                            'posts_per_page' => $paging,
                                         );
 //                                        die(1233);
                                         $query = new WP_Query($arr);
@@ -196,7 +201,7 @@
                                                             <!-- Video Thumbnail End -->
                                                         </figure>
                                                         <!-- Video Title -->
-                                                        <h4><a href="<?php print get_permalink($post->ID); ?>"><?php print catchuoi($post->post_title, 30); ?></a></h4>
+                                                        <h4><a href="<?php print get_permalink($post->ID); ?>"><?php print catchuoi($post->post_title, $limt_character); ?></a></h4>
                                                         <!-- Video Title -->
                                                     </div>
                                                     <!-- Video Box End -->
@@ -237,7 +242,7 @@
                                                 'terms' => $cat_info->term_id
                                             ),
                                         ),
-                                        'posts_per_page' => 40,
+                                        'posts_per_page' => $paging,
                                     );
                                     $query = new WP_Query($array);
                                     if ($query->have_posts()):
@@ -253,13 +258,13 @@
                                                         <!-- Video Thumbnail Start --> 
                                                         <a href="<?php print get_permalink(get_the_ID()); ?>">
                                                             <?php if ($censored = (get_field('censored', $post->ID))) : ?>
-                                                                    <div class="discount-tag"></div>
-                                                                <?php endif; ?>
+                                                                <div class="discount-tag"></div>
+                                                            <?php endif; ?>
                                                             <!--image size-->
                                                             <!--207 x 138-->
                                                             <!--size medium 414 x 276-->
-                                                            
-                                                            <img src="<?php print get_bfithumb(414, 276, $image) ; ?>" alt="<?php print the_title(); ?>" class="img-responsive hovereffect">
+
+                                                            <img src="<?php print get_bfithumb(414, 276, $image); ?>" alt="<?php print the_title(); ?>" class="img-responsive hovereffect">
                                                         </a>
                                                         <div class="vidopts">
                                                             <ul>
@@ -270,7 +275,7 @@
                                                         <!-- Video Thumbnail End -->
                                                     </figure>
                                                     <!-- Video Title -->
-                                                    <h4><a href="<?php print get_permalink(get_the_ID()); ?>"><?php print catchuoi(get_the_title(), 30); ?></a></h4>
+                                                    <h4><a href="<?php print get_permalink(get_the_ID()); ?>"><?php print catchuoi(get_the_title(), $limt_character); ?></a></h4>
                                                     <!-- Video Title -->
                                                 </div>
                                                 <!-- Video Box End -->
@@ -315,7 +320,7 @@
                 <div class="clearfix"></div>
                 <div class="row">
                     <?php
-                    $block_home_adv = get_home_top(874,'block_homes','limit_home','block_home');
+                    $block_home_adv = get_home_top(874, 'block_homes', 'limit_home', 'block_home');
                     if ($block_home_adv) :
                         for ($block_adv = 0; $block_adv < count($block_home_adv); $block_adv++) :
                             $post_adv = get_post($block_home_adv["$block_adv"]);

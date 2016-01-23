@@ -13,6 +13,9 @@ $args = array(
     'posts_per_page' => 6,
 );
 $vm_query = new WP_Query($args);
+$character = vm_get_option('opt-limit-related-video');
+$limt_character = end(explode("|", $character));
+
 ?>
 
 <?php if ($vm_query->have_posts()): ?>
@@ -52,7 +55,7 @@ $vm_query = new WP_Query($args);
                             <!-- Video Info End --> 
                         </figure>
                         <!-- Video Title Start -->
-                        <h4><a href="<?php echo get_the_permalink() ?>"><?php echo catchuoi (get_the_title(),20); ?></a></h4>
+                        <h4><a href="<?php echo get_the_permalink() ?>"><?php echo catchuoi (get_the_title(),$limt_character); ?></a></h4>
                         <!-- Video Title End --> 
                     </div>
                     <!-- Video Box End --> 

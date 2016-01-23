@@ -39,11 +39,36 @@
 
             <div class="<?php echo $content_class; ?>">
                 <div class="sections">
-                    <h2 class="heading"><?php echo __('Archive', THEME_TEXT_DOMAIN); ?></h2>
+                    <h2 class="heading"><?php echo __('Tag : ', THEME_TEXT_DOMAIN). get_query_var('tag'); ?> </h2>
                     <div class="clearfix"></div>
                     <div class="row">
-                        <?php if (have_posts()) : ?>
-                            <?php while (have_posts()) : the_post(); ?>
+                        <?php
+                        $query = new WP_Query( array( 'tag' => 'muramura' ) );
+                        global $wpdb;
+                        $results = $wpdb->get_results( "SELECT DISTINCT $wpdb->term_relationships.object_id  FROM $wpdb->terms,$wpdb->term_relationships WHERE $wpdb->terms.term_id = $wpdb->term_relationships.term_taxonomy_id AND $wpdb->terms.name = '".get_query_var('tag')."' ", ARRAY_A );
+                        $array = array_values($results);
+                        $array = array_values($array);
+                        for($i=0;$i<count($array);$i++){
+                            $arrays[] = $array[$i]['object_id'];
+                        }
+                        $character = vm_get_option('opt-limit-tag');
+                        $paging = current(explode("|", $character));
+                        $limt_character = end(explode("|", $character));
+                        $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+                        $args = array(
+                                'post_type' => 'video',
+                                'paged' => $paged,
+                                'post__in' => $arrays,
+                                'posts_per_page' => $paging,
+
+                            );
+                            $query = new WP_Query($args);
+                            $total = $query->max_num_pages;
+                            
+
+                        ?>
+                        <?php if ($query->have_posts()) : ?>
+                            <?php while ($query->have_posts()) : $query->the_post(); ?>
 
                                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6"> 
                                     <div <?php post_class('blogposttwo'); ?>>
@@ -51,13 +76,13 @@
                                             <!-- Video Thumbnail Start --> 
                                             <a href="<?php echo get_the_permalink() ?>">
                                                 <?php if (has_post_thumbnail()): ?>
-                                                    <?php $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'single-post-thumbnail'); ?> 
-                                                    <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" />
+                                                    <?php $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full'); ?> 
+                                                <img src="<?php echo get_bfithumb(652, 366, $thumbnail[0]) ; ?>" alt="<?php echo get_the_title(); ?>" class="img-responsive hovereffect" />
                                                 <?php endif; ?>
                                             </a> 
                                         </figure>
                                         <div class="text">
-                                            <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+                                            <h4><a href="<?php the_permalink() ?>"><?php print catchuoi(get_the_title(), $limt_character); ?></a></h4>
                                             <ul>
                                                 <li><i class="fa fa-calendar"></i><?php the_time('d-m-Y'); ?></li>
                                                 <li>
@@ -82,6 +107,33 @@
                 </div>
                 <!-- Contents Section End -->
                 <div class="clearfix"></div>
+                <ul class="pagination">
+                    
+                    <?php
+
+                       $next = $paged+1;
+                        $pre =$paged-1;
+                        $link = get_home_url() .'/tag/'.  get_query_var('tag');
+                        if($total>1){
+
+                       if($paged>1){
+                            echo '<li><a href=" '.  $link .'/?page='.$pre.'"><i class="fa fa-angle-left"></i></a></li>';
+                        }
+                         
+                       for($i = 1;$i<=$total;$i++){
+                           if($i==$paged){
+                                echo '<li class="active" ><a  href="javascript:void()">'.$i.'</a></li>' ;
+                            }else{
+                                echo '<li><a  href=" '.$link.'/?page='.$i.'">'.$i.'</a></li>';
+                            }
+                        }
+                        if($paged<$total){
+                            echo '<li><a href="'.$link.'/?page='.$next.'"><i class="fa fa-angle-right"></i></a></li>';
+                        }
+                    }
+                    ?>
+
+                </ul>
 
             </div>
 
