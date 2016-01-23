@@ -23,10 +23,10 @@
 define('DB_NAME', 'phim');
 
 /** MySQL database username */
-define('DB_USER', 'phim');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '123456789@abc');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -36,6 +36,7 @@ define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+define('FS_METHOD', 'direct');
 
 /**#@+
  * Authentication Unique Keys and Salts.
