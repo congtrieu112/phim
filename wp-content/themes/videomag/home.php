@@ -348,9 +348,7 @@
 
 
                 </div>
-                <div class="advs">
-                    <script> var _gunggo={settings:{siteID:"S0009448",pop:{type:"tab"}}}; _gunggo.settings.pop.freqcap={frequency:2,duration:1};  </script> <script src="//cdn.directrev.com/js/gp.min.js?s=S0009448"></script> <!-- END S0009448 TAG --> <!-- BEGIN share3x.net 300x250 BANNER --> <script>var _drev={site:"S0009449",type:1}</script> <script src="http://xch.directrev.com/js/gb.min.js?s=S0009449"></script>
-                </div>
+                
             </div>
         </div>
     </div>
