@@ -626,6 +626,12 @@ if (!class_exists('Vm_Redux_Framework_Config')) {
                         'title' => __('Related video 28|40', THEME_TEXT_DOMAIN),
                         'default' => '28|40',
                     ),
+                    array(
+                        'id' => 'opt-limit-block-top-home-right',
+                        'type' => 'text',
+                        'title' => __('Block top home right 28|40', THEME_TEXT_DOMAIN),
+                        'default' => '28|40',
+                    ),
                 ),
             );
         }

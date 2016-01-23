@@ -80,6 +80,9 @@
 
                             <?php
                             $block_home_2 = get_home_top(871, 'block_homes', 'limit_home', 'block_home');
+                            $character = vm_get_option('opt-limit-block-top-home-right');
+                            $paging = current(explode("|", $character));
+                            $limt_character = end(explode("|", $character));
                             for ($block2 = 0; $block2 < count($block_home_2); $block2++) :
                                 $post2 = get_post($block_home_2["$block2"]);
                                 $image = (wp_get_attachment_image_src(get_post_thumbnail_id($post2->ID), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id($post2->ID), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
@@ -107,7 +110,7 @@
                                             <!-- Video Thumbnail End -->
                                         </figure>
                                         <!-- Video Title -->
-                                        <h4><a class="title-text" href="<?php print get_permalink($post2->ID); ?>"><?php print catchuoi($post2->post_title, 15); ?></a></h4>
+                                        <h4><a class="title-text" href="<?php print get_permalink($post2->ID); ?>"><?php print catchuoi($post2->post_title, $limt_character); ?></a></h4>
                                         <!-- Video Title -->
                                     </div>
                                     <!-- Video Box End -->
@@ -338,15 +341,13 @@
                                             <img src="<?php print get_bfithumb(640, 360, $image) ?>" alt="<?php print $post_adv->post_title ?>" class="img-responsive hovereffect">
                                         </a>
                                         <div class="vidopts">
-                                            <ul>
-                                                <li><i class="fa fa-clock-o"></i><?php print $time; ?></li>
-                                            </ul>
+                                            
                                             <div class="clearfix"></div>
                                         </div>
                                         <!-- Video Thumbnail End -->
                                     </figure>
                                     <!-- Video Title -->
-                                    <h4><a class="title-text" href="<?php print $link_adv; ?>"><?php print catchuoi($post_adv->post_title, 15); ?></a></h4>
+                                    <!--<h4><a class="title-text" href="<?php print $link_adv; ?>"><?php print catchuoi($post_adv->post_title, 15); ?></a></h4>-->
                                     <!-- Video Title -->
                                 </div>
                                 <!-- Video Box End -->
