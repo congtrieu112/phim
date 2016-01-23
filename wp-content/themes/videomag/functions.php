@@ -1021,6 +1021,9 @@ function load_more() {
 //    }
     
     $array = array();
+    $character = vm_get_option('opt-limit-home');
+    $paging = current(explode("|", $character));
+    $limt_character = end(explode("|", $character));
     if ($_POST['team_id']) {
         $array = array(
             'post_type' => 'video',
@@ -1035,12 +1038,12 @@ function load_more() {
                 ),
             ),
             'paged' => $_POST['page'],
-            'posts_per_page' => 40,
+            'posts_per_page' => $paging,
         );
     } else {
         $array = array(
             'post_type' => 'video',
-            'posts_per_page' => 40,
+            'posts_per_page' => $paging,
             'paged' => $_POST['page'],
         );
     }
@@ -1051,6 +1054,7 @@ function load_more() {
     if($_POST['page'] > $total){
         exit();
     }
+    
     if ($query->have_posts()):
         while ($query->have_posts()): $query->the_post();
             $image = (wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]) ? wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0] : get_template_directory_uri() . '/images/images/img21.jpg';
@@ -1078,7 +1082,7 @@ function load_more() {
                             <!-- Video Thumbnail End -->
                         </figure>
                         <!-- Video Title -->
-                        <h4><a href="<?php print get_permalink(get_the_ID()); ?>"><?php print catchuoi(get_the_title(), 15); ?></a></h4>
+                        <h4><a href="<?php print get_permalink(get_the_ID()); ?>"><?php print catchuoi(get_the_title(), $limt_character); ?></a></h4>
                         <!-- Video Title -->
                     </div>
                     <!-- Video Box End -->
