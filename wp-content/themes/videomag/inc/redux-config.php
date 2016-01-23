@@ -587,7 +587,7 @@ if (!class_exists('Vm_Redux_Framework_Config')) {
             );
             $this->sections[] = array(
                 'title' => __('Paging & character', THEME_TEXT_DOMAIN),
-                'desc' => __('Custom number paging', THEME_TEXT_DOMAIN),
+                'desc' => __('Custom number paging (number recore inpage )', THEME_TEXT_DOMAIN),
                 'icon' => 'el-icon-refresh',
                 'fields' => array(
                     array(
