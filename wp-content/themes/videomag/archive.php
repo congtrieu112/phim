@@ -45,8 +45,9 @@
                         <?php
                         global $wpdb;
                         $results = $wpdb->get_results( "SELECT DISTINCT $wpdb->term_relationships.object_id  FROM $wpdb->terms,$wpdb->term_relationships WHERE $wpdb->terms.term_id = $wpdb->term_relationships.term_taxonomy_id AND $wpdb->terms.name = '".get_query_var('tag')."' ", ARRAY_A );
-                        $array = array_values($results);
-                        $array = array_values($array);
+                        
+                        $array = ($results) ? array_values($results) : "";
+                        $array = ($array) ? array_values($array) : "";
                         for($i=0;$i<count($array);$i++){
                             $arrays[] = $array[$i]['object_id'];
                         }
@@ -66,7 +67,7 @@
                             
 
                         ?>
-                        <?php if ($query->have_posts()) : ?>
+                        <?php if ($query->have_posts() && $array) : ?>
                             <?php while ($query->have_posts()) : $query->the_post(); ?>
 
                                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6"> 
