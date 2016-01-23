@@ -27,22 +27,24 @@ Template Name: Custom page
                         $key = "";
                         $value = "";
                         $id = "";
+
                         $paged = (get_query_var('page')) ? get_query_var('page') : 1;
                         $keys = "";
-                        if (isset($_REQUEST['Country'])) {
+                        if (isset($_GET['Country'])) {
                             $keys = 'Country';
-                            $value = $_REQUEST['Country'];
+                            $value = $_GET['Country'];
                             $key = "country";
-                            $id = get_page_by_path($value,OBJECT, 'key')->ID;
+                            $id = get_page_by_path($value,OBJECT, 'key');
                             
                         }
-                        if (isset($_REQUEST['Actress'])) {
+                        if (isset($_GET['Actress'])) {
                             $keys = 'Actress';
-                            $value = $_REQUEST['Actress'];
+                            $value = $_GET['Actress'];
                             $key = "actress";
-                            $id = get_page_by_path($value,OBJECT, 'key')->ID;
+                            $id = get_page_by_path($value,OBJECT, 'key');
                         }
-                        $link = esc_url( add_query_arg( $keys, $key, get_permalink( 915 ) ) );
+                        $link = esc_url( add_query_arg( $keys, $value, get_permalink( 915 ) ) );
+
                         if ($value ) :
                             
                 
