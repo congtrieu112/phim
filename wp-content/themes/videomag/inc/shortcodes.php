@@ -889,39 +889,7 @@ function vm_do_categorynav_bar($atts) {
 		</span>
 	</a>
 </li>
-<?php if(!is_user_logged_in()) : ?>
-<li id="menu-item-775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-775 widgets_dropdown default_style drop_to_right submenu_default_width columns1">
-	<a href="<?php print home_url(); ?>/login/" class="item_link  disable_icon" tabindex="0">
-		<i class=""></i> 
-		<span class="link_content">
-			<span class="link_text">
-			LOGIN
-			</span>
-		</span>
-	</a>
-</li>
-<li id="menu-item-775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-775 widgets_dropdown default_style drop_to_right submenu_default_width columns1">
-	<a href="<?php print home_url(); ?>/register/" class="item_link  disable_icon" tabindex="0">
-		<i class=""></i> 
-		<span class="link_content">
-			<span class="link_text">
-			REGISTER
-			</span>
-		</span>
-	</a>
-</li>
 
-<li id="menu-item-775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-775 widgets_dropdown default_style drop_to_right submenu_default_width columns1">
-	<a href="<?php print home_url(); ?>/forgot-password/" class="item_link  disable_icon" tabindex="0">
-		<i class=""></i> 
-		<span class="link_content">
-			<span class="link_text">
-			FORGOT PASSWORD
-			</span>
-		</span>
-	</a>
-</li>
-<?php endif;    ?>
 </ul>
 		</div><!-- /class="menu_inner" -->
 	</div><!-- /class="menu_holder" -->
