@@ -12,7 +12,7 @@ function vm_do_topnav_bar($atts) {
         <div class="custom-container">
             <div class="row">
                 <!-- Top Categories Start -->
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-6">
+                <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
                     <div class="topcategories">
                         <!-- navbar Start -->
                         <div class="navbar yamm navbar-default">

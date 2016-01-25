@@ -504,15 +504,17 @@ header.style2 .searchbox input[type="text"]:-ms-input-placeholder {
 	width: -o-max-content;
 }
 .loginsec a {
-	float:left;
-	display:block;
-	position:relative;
-	margin-right:20px;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-ms-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
+	    float: left;
+    display: block;
+    position: relative;
+    margin-right: 20px;
+    font-size: 20px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    color: wheat;
 }
 .loginsec a:last-child {
 	margin-left:0px;
