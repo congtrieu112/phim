@@ -41,8 +41,8 @@ jQuery.noConflict();
    NProgress.start();
   $(window).bind("load", function() { 
     NProgress.done();
-    jQuery('.fadess').removeClass('out');
-    jQuery('.fadess').removeClass('fadess');  
+    $('.fadess').removeClass('out');
+    $('.fadess').removeClass('fadess');  
 //    setTimeout(function() { NProgress.done();jQuery('.fadess').removeClass('out'); jQuery('.fadess').removeClass('fadess');}, 2000);  
 
 });
