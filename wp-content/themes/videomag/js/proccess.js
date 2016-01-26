@@ -1,7 +1,6 @@
 jQuery.noConflict();
 (function( $ ) {
   $(function() {
-      
         var height_slide = $("#top-home").height();
         $(".carousel-inner").css('max-height', height_slide)
         $(window).resize(function () {
@@ -39,6 +38,15 @@ jQuery.noConflict();
      
         
   });
+   NProgress.start();
+  $(window).bind("load", function() { 
+    NProgress.done();
+    jQuery('.fadess').removeClass('out');
+    jQuery('.fadess').removeClass('fadess');  
+//    setTimeout(function() { NProgress.done();jQuery('.fadess').removeClass('out'); jQuery('.fadess').removeClass('fadess');}, 2000);  
+
+});
+   
 })(jQuery);
 
 

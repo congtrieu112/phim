@@ -311,4 +311,6 @@ function WtiLikePostEnqueueScripts() {
      
      // Load css file
      wp_enqueue_style( 'wti_like_post_script', plugins_url( 'css/wti_like_post.css', __FILE__ ) );
+     wp_enqueue_style('vm-style-nprogress', get_template_directory_uri() . '/css/nprogress.css');
+
 }

@@ -36,6 +36,7 @@
 <a href="#" class="pull-right gotop btn btn-primary backcolor"> <i class="fa fa-arrow-up"></i> </a>
 </div>
 <!-- Wrapper End -->
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

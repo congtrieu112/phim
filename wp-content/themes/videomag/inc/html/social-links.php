@@ -5,7 +5,7 @@
                             <a href="<?php print home_url(); ?>/login" class="colorhover"><i class="fa fa-lock"></i>Login</a>
                             <a href="<?php print home_url(); ?>/register" class="colorhover"><i class="fa fa-sign-in"></i>Sign Up</a>
                             <?php else : ?>
-                            <a href="<?php print home_url(); ?>/profile" class="colorhover"><i class="fa fa-lock"></i>Information</a>
+                            <a href="<?php print home_url(); ?>/profile" class="colorhover"><i class="fa fa-pencil-square-o"></i>Information</a>
                             <a href="<?php echo wp_logout_url(home_url() ); ?>" class="colorhover"><i class="fa fa-sign-in"></i>Exit</a>
                             <?php endif; ?>
                             

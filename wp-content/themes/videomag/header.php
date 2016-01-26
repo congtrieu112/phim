@@ -28,8 +28,16 @@
             <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
             <script type="text/javascript" src="js/respond.min.js"></script>
         <![endif]-->
-        <script type="text/javascript" src="http://content.jwplatform.com/libraries/h2dPfFWZ.js"></script>
-    <script type="text/javascript">jwplayer.key = 'H9xTsh9D62dkv+MYY96fdzM8RhYZCIlEKrYe+OxlxbM='</script>
+        
+        <!--83tV+S0kCYI/D2CIhRollTeLZBbTOcFO3ta94A==--><!--free key -->
+        <!--http://content.jwplatform.com/libraries/PSq4YSgZ.js-->
+        
+        <!--H9xTsh9D62dkv+MYY96fdzM8RhYZCIlEKrYe+OxlxbM=--> <!-- key buy-->
+        
+        <!--http://content.jwplatform.com/libraries/h2dPfFWZ.js-->
+        <script type="text/javascript" src="http://content.jwplatform.com/libraries/PSq4YSgZ.js"></script>
+        
+    <script type="text/javascript">jwplayer.key = '83tV+S0kCYI/D2CIhRollTeLZBbTOcFO3ta94A=='</script>
     <script type=text/javascript>
         var SINGLE_VIDEO = <?php print (is_singular( 'video' )) ? 1 : 0; ?>
     </script>
@@ -37,6 +45,8 @@
     </head>
 
     <body <?php body_class(); ?>>
+        
+<div  id="bodyshow" class="fadess out">
 
         <!-- facebook share button start -->
         <div id="fb-root"></div>

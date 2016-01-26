@@ -198,7 +198,9 @@ function vm_softcircles_scripts() {
     wp_enqueue_script('vm-respond', get_template_directory_uri() . '/js/respond.min.js', array(), '20120206', true);
     wp_enqueue_script('vm-main-script', get_template_directory_uri() . '/js/functions.js', array(), true);
     wp_enqueue_script('vm-sharing-buttons', THEME_JS . '/share-buttons.js', array(), true);
+    wp_enqueue_script('script-name-two', get_template_directory_uri() . '/js/nprogress.js', array(), '262', true);
     wp_enqueue_script('script-name', get_template_directory_uri() . '/js/proccess.js', array(), '262', true);
+
 
    // wp_register_script( 'script-name', THEME_JS . '/proccess.js', array( 'jquery' ), '1.1', true );
 

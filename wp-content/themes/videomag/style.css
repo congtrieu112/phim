@@ -2736,3 +2736,19 @@ li.likes {
 .discount-tag:after {
     content: "CEN";
 }
+/*start plugin progress*/
+        .fadess {
+            transition: all 300ms linear 700ms;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fadess.out {
+            opacity: 0;
+        }
+
+        /*end plugin progress*/
